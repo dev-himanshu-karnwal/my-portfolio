@@ -287,6 +287,100 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "forex-network-platform",
+    title: "Forex Network Platform",
+    shortDescription:
+      "Multi-role forex trading and referral platform with wallet management, commission workflows, and hierarchical partner systems.",
+  
+    description:
+      "Large-scale fintech platform designed for forex trading operations, referral network management, wallet handling, and multi-level commission tracking. Built to support high user activity, role-based access control, transaction visibility, and operational scalability across admins, partners, and traders.",
+  
+    category: "Fintech Platform",
+  
+    role: "Full Stack Engineer",
+  
+    stack: [
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "REST APIs",
+      "Socket.io",
+      "Tailwind CSS",
+      "JWT Authentication",
+    ],
+  
+    featured: true,
+  
+    image: "/images/projects/rangersfx.svg",
+  
+    accent: "#4f46e5",
+  
+    overview:
+      "Developed a multi-role trading ecosystem supporting referral structures, commission tracking, wallet operations, and trading activity management. The platform unified administrative operations, user onboarding, partner hierarchy management, and financial reporting into a centralized operational system.",
+  
+    problem:
+      "Trading communities and referral-driven financial platforms often struggle with fragmented user management, unclear commission visibility, delayed transaction updates, and operational complexity across growing partner networks.",
+  
+    solution:
+      "Built a centralized platform enabling traders, partners, and administrators to operate through role-specific dashboards with synchronized wallet systems, referral tracking, commission management, and operational reporting.",
+  
+    features: [
+      "Multi-role authentication and access control",
+      "Referral and partner hierarchy management",
+      "Commission and reward tracking system",
+      "Wallet balance and transaction management",
+      "Trading activity visibility and reporting",
+      "Admin dashboard for operational oversight",
+      "Secure authentication and protected workflows",
+      "Responsive dashboards optimized for multiple devices",
+    ],
+  
+    architecture: [
+      {
+        label: "Frontend Platform",
+        description:
+          "Built responsive dashboard interfaces with modular UI architecture and role-specific workflows for traders, partners, and administrators.",
+      },
+      {
+        label: "Backend Services",
+        description:
+          "Developed REST API services for authentication, commission calculations, transaction handling, referral relationships, and operational workflows.",
+      },
+      {
+        label: "Data & Access Layer",
+        description:
+          "Designed MongoDB schemas for hierarchical user relationships, transaction records, wallet balances, and financial activity logs.",
+      },
+      {
+        label: "Security & Permissions",
+        description:
+          "Implemented JWT-based authentication, route protection, and granular permission management across different user roles.",
+      },
+    ],
+  
+    challenges: [
+      "Managing deeply nested referral structures and commission distribution logic",
+      "Maintaining transactional consistency for wallet and commission operations",
+      "Designing scalable user-role relationships and hierarchical data flows",
+      "Handling financial reporting visibility across multiple permission levels",
+      "Balancing operational complexity with a clean user experience",
+    ],
+  
+    outcomes: [
+      "Centralized operational management across trading, referral, and commission workflows",
+      "Improved visibility into financial activity and partner performance",
+      "Reduced manual tracking effort for administrators and network managers",
+      "Created scalable architecture capable of supporting growing partner ecosystems",
+    ],
+  
+    learnings: [
+      "Financial systems require strict consistency and audit-friendly data handling",
+      "Hierarchical relationship modeling becomes increasingly complex at scale",
+      "Role-based workflow isolation is critical in multi-user fintech systems",
+      "Operational dashboards must prioritize clarity over visual complexity",
+    ],
+  },
+  {
     slug: "rapiddine",
     title: "RapidDine",
     shortDescription:

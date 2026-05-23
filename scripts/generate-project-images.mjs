@@ -16,7 +16,7 @@ const projects = [
     title: "Blue-Collar Workforce Platform",
     accent: "#3d3a36",
   },
-  { file: "restaurant.svg", title: "RapidDine", accent: "#6b8f71" },
+  { file: "rangersfx.svg", title: "Rangers FX", accent: "#D2EFEB" },
   { file: "kameti-ledger.svg", title: "Kameti Ledger", accent: "#3f4a5a" },
   { file: "typolens.svg", title: "TypoLens", accent: "#6b8f71" },
   {
