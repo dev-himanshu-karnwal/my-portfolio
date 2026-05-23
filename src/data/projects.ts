@@ -381,85 +381,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "rapiddine",
-    title: "RapidDine",
-    shortDescription:
-      "Cloud-driven restaurant ordering, real-time kitchen queue, and operational analytics for front-of-house, kitchen, and management teams.",
-    description:
-      "Comprehensive restaurant management system designed to streamline ordering workflows, unify kitchen operations, and provide actionable reporting. The solution delivers a seamless digital experience for both staff and management, reducing operational friction during peak hours and minimizing order errors via synchronized, real-time updates.",
-    category: "Restaurant Management System",
-    role: "Full Stack Engineer • Devops Engineer",
-    stack: [
-      "React.js",
-      "Node.js",
-      "MongoDB",
-      "Socket.io",
-      "Tailwind CSS",
-      "REST APIs",
-    ],
-    featured: false,
-    image: "/images/projects/restaurant.svg",
-    accent: "#6b8f71",
-    overview:
-      "Developed a robust operations platform for restaurants, combining a digital menu, order management, kitchen display systems, and staff accessibility tools. The system ensures real-time status visibility from order placement to service completion, empowering teams to deliver prompt, error-free service even under high demand.",
-    problem:
-      "Restaurants relying on paper tickets and scattered digital tools struggle with miscommunication, order delays, and operational bottlenecks, particularly during busy shifts. Lack of real-time coordination causes kitchen confusion, lost orders, and inefficient reporting, impacting both service quality and business insights.",
-    solution:
-      "Engineered a centralized web application that digitally manages menu offerings, routes live orders to appropriate kitchen stations using WebSockets, and maintains a synchronized view of active and historical orders for staff and managers. All roles—admin, kitchen, counter—operate from unified, role-specific dashboards tightly integrated with data persistence and analytics.",
-    features: [
-      "Interactive digital menu with category, modifier, and availability controls",
-      "Instant order placement and live kitchen order queue with preparation timers",
-      "Role-based dashboards for counter, kitchen, and admin functions",
-      "Comprehensive order status management (placed → in progress → served)",
-      "Sales, performance, and inventory analytics reporting",
-      "Centralized menu management and dynamic pricing",
-      "Real-time kitchen and counter synchronization using Socket.io",
-      "Mobile-optimized interface for staff across devices",
-    ],
-    architecture: [
-      {
-        label: "Frontend Experience",
-        description:
-          "React.js SPA architected with modular UI components, stateful order flows, and mobile-first design for staff accessibility.",
-      },
-      {
-        label: "Realtime Order Flow",
-        description:
-          "Socket.io-powered bidirectional communication syncing order and status events between counter and multiple kitchen stations.",
-      },
-      {
-        label: "Backend & Persistence",
-        description:
-          "Node.js REST API services with MongoDB for flexible menu document structures, order/event logs, and analytics aggregation.",
-      },
-      {
-        label: "Access Control",
-        description:
-          "Role-based authentication with granular permissions for admin, kitchen, and front-of-house users.",
-      },
-    ],
-    challenges: [
-      "Ensuring atomicity and real-time consistency of order state across concurrent kitchen and counter interactions",
-      "Designing kitchen and counter UIs for ultra-fast, glanceable operation in noisy, high-traffic environments",
-      "Building robust role separation and audit trails to track order assignment, progression, and modifications",
-      "Handling dynamic menu changes and out-of-stock events during service without disrupting active orders",
-      "Optimizing event-driven WebSocket workflow to minimize latency and support multiple simultaneous connections",
-    ],
-    outcomes: [
-      "Eliminated manual miscommunication between service and kitchen teams, reducing order delays and preparation errors",
-      "Enabled instant, transparent tracking of all orders through preparation and service lifecycles",
-      "Provided actionable analytics and order history for management, supporting business planning and performance optimization",
-      "Created an extensible platform architecture ready for integration with POS, payment, and inventory systems",
-      "Drove measurable improvements in staff coordination and customer turnaround time during high-traffic periods",
-    ],
-    learnings: [
-      "Effective real-time systems in hospitality require explicit, well-typed state machines rather than loose event triggers",
-      "Glanceable, low-distraction UX for staff dramatically improves speed and accuracy in high-pressure environments",
-      "Operational resilience depends on robust order recovery, persistent audit logs, and granular permissions control",
-      "Coordinating across multiple user types (admin, staff, kitchen) demands clear, role-specific workflow isolation",
-    ],
-  },
-  {
     slug: "blue-collar-workforce-platform",
     title: "Blue-Collar Workforce Platform",
     shortDescription:
@@ -562,6 +483,85 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "rapiddine",
+    title: "RapidDine",
+    shortDescription:
+      "Cloud-driven restaurant ordering, real-time kitchen queue, and operational analytics for front-of-house, kitchen, and management teams.",
+    description:
+      "Comprehensive restaurant management system designed to streamline ordering workflows, unify kitchen operations, and provide actionable reporting. The solution delivers a seamless digital experience for both staff and management, reducing operational friction during peak hours and minimizing order errors via synchronized, real-time updates.",
+    category: "Restaurant Management System",
+    role: "Full Stack Engineer • Devops Engineer",
+    stack: [
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "Socket.io",
+      "Tailwind CSS",
+      "REST APIs",
+    ],
+    featured: false,
+    image: "/images/projects/restaurant.svg",
+    accent: "#6b8f71",
+    overview:
+      "Developed a robust operations platform for restaurants, combining a digital menu, order management, kitchen display systems, and staff accessibility tools. The system ensures real-time status visibility from order placement to service completion, empowering teams to deliver prompt, error-free service even under high demand.",
+    problem:
+      "Restaurants relying on paper tickets and scattered digital tools struggle with miscommunication, order delays, and operational bottlenecks, particularly during busy shifts. Lack of real-time coordination causes kitchen confusion, lost orders, and inefficient reporting, impacting both service quality and business insights.",
+    solution:
+      "Engineered a centralized web application that digitally manages menu offerings, routes live orders to appropriate kitchen stations using WebSockets, and maintains a synchronized view of active and historical orders for staff and managers. All roles—admin, kitchen, counter—operate from unified, role-specific dashboards tightly integrated with data persistence and analytics.",
+    features: [
+      "Interactive digital menu with category, modifier, and availability controls",
+      "Instant order placement and live kitchen order queue with preparation timers",
+      "Role-based dashboards for counter, kitchen, and admin functions",
+      "Comprehensive order status management (placed → in progress → served)",
+      "Sales, performance, and inventory analytics reporting",
+      "Centralized menu management and dynamic pricing",
+      "Real-time kitchen and counter synchronization using Socket.io",
+      "Mobile-optimized interface for staff across devices",
+    ],
+    architecture: [
+      {
+        label: "Frontend Experience",
+        description:
+          "React.js SPA architected with modular UI components, stateful order flows, and mobile-first design for staff accessibility.",
+      },
+      {
+        label: "Realtime Order Flow",
+        description:
+          "Socket.io-powered bidirectional communication syncing order and status events between counter and multiple kitchen stations.",
+      },
+      {
+        label: "Backend & Persistence",
+        description:
+          "Node.js REST API services with MongoDB for flexible menu document structures, order/event logs, and analytics aggregation.",
+      },
+      {
+        label: "Access Control",
+        description:
+          "Role-based authentication with granular permissions for admin, kitchen, and front-of-house users.",
+      },
+    ],
+    challenges: [
+      "Ensuring atomicity and real-time consistency of order state across concurrent kitchen and counter interactions",
+      "Designing kitchen and counter UIs for ultra-fast, glanceable operation in noisy, high-traffic environments",
+      "Building robust role separation and audit trails to track order assignment, progression, and modifications",
+      "Handling dynamic menu changes and out-of-stock events during service without disrupting active orders",
+      "Optimizing event-driven WebSocket workflow to minimize latency and support multiple simultaneous connections",
+    ],
+    outcomes: [
+      "Eliminated manual miscommunication between service and kitchen teams, reducing order delays and preparation errors",
+      "Enabled instant, transparent tracking of all orders through preparation and service lifecycles",
+      "Provided actionable analytics and order history for management, supporting business planning and performance optimization",
+      "Created an extensible platform architecture ready for integration with POS, payment, and inventory systems",
+      "Drove measurable improvements in staff coordination and customer turnaround time during high-traffic periods",
+    ],
+    learnings: [
+      "Effective real-time systems in hospitality require explicit, well-typed state machines rather than loose event triggers",
+      "Glanceable, low-distraction UX for staff dramatically improves speed and accuracy in high-pressure environments",
+      "Operational resilience depends on robust order recovery, persistent audit logs, and granular permissions control",
+      "Coordinating across multiple user types (admin, staff, kitchen) demands clear, role-specific workflow isolation",
+    ],
+  },
+  {
     slug: "kameti-ledger",
     title: "Kameti Ledger",
     shortDescription:
@@ -657,61 +657,6 @@ export const projects: Project[] = [
       "Desktop applications handling operational workflows require extremely optimized navigation and low-friction data entry",
       "Complex payment systems become maintainable only when domain logic is isolated from UI and storage layers",
       "Explainability of calculations is as important as the calculations themselves in financial products",
-    ],
-  },
-  {
-    slug: "typolens-chrome-extension",
-    title: "TypoLens",
-    shortDescription:
-      "Chrome extension for seamless, context-aware spelling and grammar enhancements throughout your browsing experience.",
-    description:
-      "A browser extension that brings real-time, inline writing assistance to any text field, offering discreet error detection and correction suggestions without disrupting your workflow.",
-    category: "Browser Extension",
-    role: "Software Engineer",
-    stack: ["TypeScript", "Chrome APIs", "React"],
-    featured: false,
-    image: "/images/projects/typolens.svg",
-    accent: "#6b8f71",
-    overview:
-      "TypoLens is a user-friendly writing improvement tool for Chrome, providing instant spelling and grammar feedback directly within web forms, emails, and documents, all through a minimal and intuitive overlay interface.",
-    problem:
-      "Writers often get interrupted when switching between tools to check their spelling and grammar, leading to lost focus and productivity during online writing tasks.",
-    solution:
-      "Built an unobtrusive browser extension using content scripts that automatically detects and highlights language errors in real time, letting users see and address issues on the spot with streamlined suggestions.",
-    features: [
-      "Instant, inline identification of spelling and grammar issues in any web text field",
-      "Quick-fix suggestions and single-click corrections",
-      "Customizable checking rules and support for excluded domains",
-      "Lightweight, intuitive popup for configuration and usage statistics",
-    ],
-    architecture: [
-      {
-        label: "Background",
-        description:
-          "Service worker manages extension state and API interactions.",
-      },
-      {
-        label: "Content",
-        description:
-          "DOM-scanning scripts identify text, inject highlights, and surface correction tools directly within the browser environment.",
-      },
-      {
-        label: "UI",
-        description:
-          "React-powered popup interface for managing extension settings and presenting usage insights.",
-      },
-    ],
-    challenges: [
-      "Ensuring compatibility across varied and dynamic website structures without interfering with user content",
-      "Maintaining performance and responsiveness when processing large or complex web pages",
-    ],
-    outcomes: [
-      "Provided a non-intrusive, always-available writing assistant for web users",
-      "Successfully distributed the extension with robust packaging and easy browser installation",
-    ],
-    learnings: [
-      "Reliable writing assistance requires careful DOM handling and a focus on user privacy",
-      "Users expect seamless integration and minimal disruption when using writing tools in their browsers",
     ],
   },
   {
@@ -811,6 +756,61 @@ export const projects: Project[] = [
       "Distributed systems demand explicit failure handling and observability strategies",
       "EventBridge simplifies scalable fan-out architectures compared to tightly coupled service integrations",
       "Infrastructure-as-Code and CI/CD are critical for repeatable cloud deployments",
+    ],
+  },
+  {
+    slug: "typolens-chrome-extension",
+    title: "TypoLens",
+    shortDescription:
+      "Chrome extension for seamless, context-aware spelling and grammar enhancements throughout your browsing experience.",
+    description:
+      "A browser extension that brings real-time, inline writing assistance to any text field, offering discreet error detection and correction suggestions without disrupting your workflow.",
+    category: "Browser Extension",
+    role: "Software Engineer",
+    stack: ["TypeScript", "Chrome APIs", "React"],
+    featured: false,
+    image: "/images/projects/typolens.svg",
+    accent: "#6b8f71",
+    overview:
+      "TypoLens is a user-friendly writing improvement tool for Chrome, providing instant spelling and grammar feedback directly within web forms, emails, and documents, all through a minimal and intuitive overlay interface.",
+    problem:
+      "Writers often get interrupted when switching between tools to check their spelling and grammar, leading to lost focus and productivity during online writing tasks.",
+    solution:
+      "Built an unobtrusive browser extension using content scripts that automatically detects and highlights language errors in real time, letting users see and address issues on the spot with streamlined suggestions.",
+    features: [
+      "Instant, inline identification of spelling and grammar issues in any web text field",
+      "Quick-fix suggestions and single-click corrections",
+      "Customizable checking rules and support for excluded domains",
+      "Lightweight, intuitive popup for configuration and usage statistics",
+    ],
+    architecture: [
+      {
+        label: "Background",
+        description:
+          "Service worker manages extension state and API interactions.",
+      },
+      {
+        label: "Content",
+        description:
+          "DOM-scanning scripts identify text, inject highlights, and surface correction tools directly within the browser environment.",
+      },
+      {
+        label: "UI",
+        description:
+          "React-powered popup interface for managing extension settings and presenting usage insights.",
+      },
+    ],
+    challenges: [
+      "Ensuring compatibility across varied and dynamic website structures without interfering with user content",
+      "Maintaining performance and responsiveness when processing large or complex web pages",
+    ],
+    outcomes: [
+      "Provided a non-intrusive, always-available writing assistant for web users",
+      "Successfully distributed the extension with robust packaging and easy browser installation",
+    ],
+    learnings: [
+      "Reliable writing assistance requires careful DOM handling and a focus on user privacy",
+      "Users expect seamless integration and minimal disruption when using writing tools in their browsers",
     ],
   },
   {
