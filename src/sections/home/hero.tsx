@@ -55,7 +55,7 @@ export function Hero() {
               <TextReveal
                 as="h1"
                 text={profile.headline}
-                className="font-display mt-3 max-w-3xl text-[2.35rem] font-medium leading-[1] tracking-tight text-foreground sm:text-5xl lg:text-[3.25rem] lg:leading-[1.08]"
+                className="font-display mt-3 max-w-3xl text-[2.35rem] font-medium leading-none tracking-tight text-foreground sm:text-5xl lg:text-[3.25rem] lg:leading-[1.08]"
                 delay={0.28}
                 stagger={0.04}
               />
@@ -153,7 +153,7 @@ export function Hero() {
             <div className="relative mx-auto w-full max-w-md lg:ml-auto lg:max-w-[420px]">
               {/* Back plate & orbit */}
               <div
-                className="absolute -right-3 top-8 hidden h-[88%] w-[72%] rounded-[2rem] border border-secondary/25 bg-secondary/[0.06] sm:block"
+                className="absolute -right-3 top-8 hidden h-[88%] w-[72%] rounded-4xl border border-secondary/25 bg-secondary/6 sm:block"
                 aria-hidden
               />
               <div
@@ -178,7 +178,7 @@ export function Hero() {
                 }
                 className="relative"
               >
-                <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] border border-border bg-muted shadow-[0_32px_64px_-24px] shadow-foreground/10 ring-1 ring-foreground/[0.04]">
+                <div className="relative aspect-4/5 overflow-hidden rounded-[1.75rem] border border-border bg-muted shadow-[0_32px_64px_-24px] shadow-foreground/10 ring-1 ring-foreground/4">
                   <Image
                     src="/images/profile.jpeg"
                     alt={profile.name}
@@ -188,7 +188,7 @@ export function Hero() {
                     sizes="(max-width: 1024px) 100vw, 420px"
                   />
                   <div
-                    className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent"
+                    className="pointer-events-none absolute inset-0 bg-linear-to-t from-background/90 via-background/10 to-transparent"
                     aria-hidden
                   />
                   <div className="absolute inset-x-0 bottom-0 p-6 sm:p-7">

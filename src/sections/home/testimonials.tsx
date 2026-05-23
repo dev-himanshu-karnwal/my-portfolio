@@ -5,15 +5,15 @@ import { FadeIn } from "@/components/motion/fade-in";
 const placeholders = [
   {
     quote:
-      "Placeholder for client or collaborator feedback. Replace with a real testimonial when available.",
-    author: "Collaborator",
-    role: "Product Lead",
+      "Himanshu did a great job with us. He is committed to getting things done and is ready to put in extra efforts. Wishing him all the best!",
+    author: "Shardul Lavekar",
+    role: "Product Founder @ 100x.bot",
   },
   {
     quote:
-      "Strong execution on full-stack delivery—clear communication and reliable delivery under scope constraints.",
-    author: "Team Lead",
-    role: "Engineering Manager",
+      "Delivered high quality work on an urgent project with great communication and strong technical skills. Really appreciate the professionalism, Would love to work together again",
+    author: "Paras Kamboj",
+    role: "Project Manager @ RapidDine",
   },
 ];
 
