@@ -1,6 +1,5 @@
 export const profile = {
   name: "Himanshu Karnwal",
-  title: "Freelance Full-Stack Developer",
   roles: ["Full-Stack Developer", "Software Engineer"],
   tagline:
     "5+ years building scalable web, mobile, and browser-based products for clients worldwide.",

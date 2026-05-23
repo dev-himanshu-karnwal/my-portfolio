@@ -9,7 +9,7 @@ export const metrics: Metric[] = [
     value: "5+",
     label: "Years Building Products",
     description:
-      "Freelance delivery across web, mobile, browser extensions, and cloud systems",
+      "Work delivery across web, mobile, browser extensions, and cloud systems",
   },
   {
     value: "20+",
@@ -18,7 +18,7 @@ export const metrics: Metric[] = [
       "SaaS platforms, mobile apps, Chrome extensions, and production cloud deployments",
   },
   {
-    value: "250+",
+    value: "500+",
     label: "HackerRank Problems Solved",
     description:
       "Algorithmic and data structure practice with 6 certificates earned",

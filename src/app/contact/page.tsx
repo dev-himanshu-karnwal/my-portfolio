@@ -32,7 +32,7 @@ export default function ContactPage() {
       <PageHeader
         label="Contact"
         title="Let's connect"
-        description="Open to freelance projects, contract work, and product-focused collaborations."
+        description="Open to full time jobs, freelance projects, and product-focused collaborations."
       />
       <section className="py-16 sm:py-24">
         <Container>

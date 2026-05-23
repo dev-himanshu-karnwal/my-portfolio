@@ -641,6 +641,8 @@ export const projects: Project[] = [
       "Node.js",
       "Serverless Framework",
       "CloudWatch",
+      "CI/CD",
+      "AWS IAM",
       "GitHub Actions",
     ],
 

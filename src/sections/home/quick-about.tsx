@@ -18,7 +18,7 @@ export function QuickAbout() {
           <FadeIn>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                As a freelance software engineer, I partner with clients and teams across the full
+                As a software engineer, I partner with clients and teams across the full
                 stack—structured frontends, dependable APIs, and deployments that hold up after
                 handoff.
               </p>
