@@ -238,6 +238,33 @@ body {
   }
 }
 
+/* Theme toggle — circular reveal via View Transitions (not a blocking overlay) */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 2;
+}
+
+::view-transition-group(root) {
+  animation-duration: 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(root),
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
+}
+
 .custom-cursor-ring {
   animation: cursor-ring-spin 12s linear infinite;
 }

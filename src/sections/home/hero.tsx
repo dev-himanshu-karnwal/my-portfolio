@@ -183,7 +183,7 @@ export function Hero() {
                     src="/images/profile.jpeg"
                     alt={profile.name}
                     fill
-                    className="object-cover object-top scale-[1.02]"
+                    className="object-cover object-top scale-[1.02] grayscale"
                     priority
                     sizes="(max-width: 1024px) 100vw, 420px"
                   />

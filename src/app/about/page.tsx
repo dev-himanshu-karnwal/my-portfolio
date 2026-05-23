@@ -29,7 +29,7 @@ export default function AboutPage() {
                   src="/images/profile.jpeg"
                   alt={profile.name}
                   fill
-                  className="object-cover"
+                  className="object-cover grayscale"
                   sizes="280px"
                 />
               </div>
