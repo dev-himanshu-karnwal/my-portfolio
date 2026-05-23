@@ -6,8 +6,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const outDir = join(__dirname, "../public/images/projects");
 mkdirSync(outDir, { recursive: true });
 
-const PRIMARY = "#1a6b63";
-const SECONDARY = "#c45c2a";
+const PRIMARY = "#3d3a36";
+const SECONDARY = "#6b8f71";
 
 const projects = [
   { file: "job-portal.svg", title: "Job Portal", accent: PRIMARY },
@@ -23,8 +23,8 @@ const projects = [
 
 for (const p of projects) {
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
-  <rect width="800" height="500" fill="#0d1210"/>
-  <rect x="40" y="40" width="720" height="420" rx="16" fill="#151c19" stroke="#2a3833" stroke-width="1"/>
+  <rect width="800" height="500" fill="#161514"/>
+  <rect x="40" y="40" width="720" height="420" rx="16" fill="#1e1d1b" stroke="#322f2c" stroke-width="1"/>
   <rect x="72" y="72" width="200" height="12" rx="6" fill="${p.accent}" opacity="0.6"/>
   <rect x="72" y="100" width="320" height="8" rx="4" fill="#3f3f46"/>
   <rect x="72" y="120" width="280" height="8" rx="4" fill="#27272a"/>

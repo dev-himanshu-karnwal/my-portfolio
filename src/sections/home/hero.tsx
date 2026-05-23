@@ -38,7 +38,7 @@ export function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_320px] lg:gap-16">
           <div>
             <motion.p
-              className="font-mono text-xs uppercase tracking-[0.2em] text-primary"
+              className="font-mono text-xs uppercase tracking-[0.2em] text-secondary"
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ ...transition.base, delay: 0.1 }}

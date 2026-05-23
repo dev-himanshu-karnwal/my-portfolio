@@ -40,7 +40,7 @@ export const projects: Project[] = [
     stack: ["Next.js", "Node.js", "PostgreSQL", "Tailwind CSS"],
     featured: true,
     image: "/images/projects/job-portal.svg",
-    accent: "#1a6b63",
+    accent: "#3d3a36",
     overview:
       "Built a production-ready job portal focused on clarity for workers and efficiency for employers. The platform supports job posting, search, applications, and role-based dashboards.",
     problem:
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     stack: ["React", "Node.js", "MongoDB", "Socket.io"],
     featured: true,
     image: "/images/projects/restaurant.svg",
-    accent: "#c45c2a",
+    accent: "#6b8f71",
     overview:
       "A restaurant operations platform covering menu management, real-time order flow, and staff dashboards for kitchen and front-of-house teams.",
     problem:
@@ -146,7 +146,7 @@ export const projects: Project[] = [
     stack: ["Electron", "React", "SQLite", "TypeScript"],
     featured: true,
     image: "/images/projects/crm.svg",
-    accent: "#1a6b63",
+    accent: "#3d3a36",
     overview:
       "Built a desktop-first CRM for teams that need reliable client data, pipeline visibility, and fast local performance without browser tab clutter.",
     problem:
@@ -199,7 +199,7 @@ export const projects: Project[] = [
     stack: ["TypeScript", "Chrome APIs", "React"],
     featured: false,
     image: "/images/projects/typolens.svg",
-    accent: "#c45c2a",
+    accent: "#6b8f71",
     overview:
       "TypoLens brings lightweight proofreading to any text field on the web through a Chrome extension with a clean overlay UI.",
     problem:
@@ -251,7 +251,7 @@ export const projects: Project[] = [
     stack: ["AWS Lambda", "SQS", "SNS", "Node.js", "DynamoDB"],
     featured: true,
     image: "/images/projects/aws-events.svg",
-    accent: "#1a6b63",
+    accent: "#3d3a36",
     overview:
       "Designed a serverless notification system that decouples producers from delivery, with retries, dead-letter handling, and channel routing.",
     problem:
@@ -304,7 +304,7 @@ export const projects: Project[] = [
     stack: ["Next.js", "PostgreSQL", "Prisma", "Tailwind CSS"],
     featured: false,
     image: "/images/projects/cashflow.svg",
-    accent: "#c45c2a",
+    accent: "#6b8f71",
     overview:
       "A personal finance tool built for clarity—quick entry, category insights, and month-over-month cashflow without bloated feature sets.",
     problem:
@@ -356,7 +356,7 @@ export const projects: Project[] = [
     stack: ["React", "Firebase", "Tailwind CSS"],
     featured: false,
     image: "/images/projects/plantark.svg",
-    accent: "#1a6b63",
+    accent: "#3d3a36",
     overview:
       "PlantArk helps plant owners maintain consistent care routines with reminders, plant profiles, and simple health logging.",
     problem:
@@ -408,7 +408,7 @@ export const projects: Project[] = [
     stack: ["Node.js", "Telegram Bot API", "MongoDB", "Redis"],
     featured: false,
     image: "/images/projects/100x-bot.svg",
-    accent: "#c45c2a",
+    accent: "#6b8f71",
     overview:
       "100x Bot automates repetitive community and ops tasks in Telegram—command handlers, scheduled messages, and lightweight integrations.",
     problem:
@@ -460,7 +460,7 @@ export const projects: Project[] = [
     stack: ["Next.js", "Supabase", "TypeScript", "Tailwind CSS"],
     featured: false,
     image: "/images/projects/oasis-notes.svg",
-    accent: "#1a6b63",
+    accent: "#3d3a36",
     overview:
       "Oasis Notes is a focused writing environment—folders, full-text search, and markdown editing without the weight of enterprise knowledge bases.",
     problem:
