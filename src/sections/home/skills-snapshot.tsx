@@ -19,7 +19,7 @@ export function SkillsSnapshot() {
             {skillsSnapshot.map((skill) => (
               <span
                 key={skill}
-                className="rounded-lg border border-border bg-card px-4 py-3 text-sm font-medium text-foreground"
+                className="surface-interactive rounded-lg border border-border bg-card px-4 py-3 text-sm font-medium text-foreground"
               >
                 {skill}
               </span>
@@ -27,7 +27,7 @@ export function SkillsSnapshot() {
           </div>
           <Link
             href="/skills"
-            className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-foreground"
+            className="link-underline mt-8 inline-flex items-center gap-2 text-sm font-medium text-foreground transition-colors duration-300 hover:text-primary"
           >
             Full tech stack
             <ArrowRight className="h-4 w-4" />

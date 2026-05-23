@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { EASE_OUT } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 type StaggerContainerProps = {
@@ -12,17 +13,17 @@ type StaggerContainerProps = {
 export function StaggerContainer({
   children,
   className,
-  stagger = 0.08,
+  stagger = 0.1,
 }: StaggerContainerProps) {
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-60px" }}
+      viewport={{ once: true, margin: "-48px" }}
       variants={{
         hidden: {},
         visible: {
-          transition: { staggerChildren: stagger },
+          transition: { staggerChildren: stagger, delayChildren: 0.05 },
         },
       }}
       className={cn(className)}
@@ -42,11 +43,11 @@ export function StaggerItem({
   return (
     <motion.div
       variants={{
-        hidden: { opacity: 0, y: 16 },
+        hidden: { opacity: 0, y: 24 },
         visible: {
           opacity: 1,
           y: 0,
-          transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
+          transition: { duration: 0.6, ease: EASE_OUT },
         },
       }}
       className={cn(className)}

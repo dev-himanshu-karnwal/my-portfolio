@@ -27,7 +27,7 @@ export function QuickAbout() {
               </p>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-muted-foreground"
+                className="link-underline inline-flex items-center gap-2 text-sm font-medium text-foreground transition-colors duration-300 hover:text-primary"
               >
                 Read my story
                 <ArrowRight className="h-4 w-4" />

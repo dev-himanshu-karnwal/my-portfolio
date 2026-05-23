@@ -31,7 +31,7 @@ export function Testimonials() {
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {placeholders.map((item, i) => (
             <FadeIn key={i} delay={i * 0.1}>
-              <blockquote className="h-full rounded-xl border border-dashed border-border bg-muted/30 p-8">
+              <blockquote className="surface-interactive h-full rounded-xl border border-dashed border-border bg-muted/30 p-8">
                 <p className="text-muted-foreground leading-relaxed">&ldquo;{item.quote}&rdquo;</p>
                 <footer className="mt-6">
                   <p className="text-sm font-medium text-foreground">{item.author}</p>

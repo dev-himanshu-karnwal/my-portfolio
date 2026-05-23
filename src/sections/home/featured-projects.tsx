@@ -20,7 +20,7 @@ export function FeaturedProjects() {
           />
           <Link
             href="/projects"
-            className="inline-flex shrink-0 items-center gap-2 text-sm font-medium text-foreground"
+            className="link-underline inline-flex shrink-0 items-center gap-2 text-sm font-medium text-foreground transition-colors duration-300 hover:text-primary"
           >
             View all projects
             <ArrowRight className="h-4 w-4" />

@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/shared/container";
@@ -9,10 +11,18 @@ export function Cta() {
     <section className="border-t border-border py-20 sm:py-28">
       <Container>
         <FadeIn>
-          <div className="relative overflow-hidden rounded-2xl border border-border bg-card px-8 py-16 text-center sm:px-16">
-            <div className="absolute inset-0 grid-bg opacity-30" aria-hidden />
+          <div className="surface-interactive relative overflow-hidden rounded-2xl border border-border bg-card px-8 py-16 text-center sm:px-16">
+            <div className="absolute inset-0 grid-bg opacity-25" aria-hidden />
+            <div
+              className="ambient-glow ambient-glow-primary left-1/4 top-0 h-48 w-72 opacity-70"
+              aria-hidden
+            />
+            <div
+              className="ambient-glow ambient-glow-secondary right-1/4 bottom-0 h-40 w-64 opacity-60"
+              aria-hidden
+            />
             <div className="relative">
-              <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+              <h2 className="font-display text-2xl font-medium tracking-tight sm:text-3xl">
                 Ready to build something solid?
               </h2>
               <p className="mx-auto mt-4 max-w-lg text-muted-foreground">

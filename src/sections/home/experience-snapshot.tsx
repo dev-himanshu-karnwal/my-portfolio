@@ -18,7 +18,7 @@ export function ExperienceSnapshot() {
           description="Building production systems with ownership across the stack."
         />
         <FadeIn className="mt-10">
-          <Card>
+          <Card className="surface-interactive border-l-[3px] border-l-primary">
             <CardHeader>
               <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
                 {current.period} · {current.location}
@@ -30,7 +30,7 @@ export function ExperienceSnapshot() {
               <p className="text-muted-foreground leading-relaxed">{current.summary}</p>
               <Link
                 href="/experience"
-                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-foreground"
+                className="link-underline mt-6 inline-flex items-center gap-2 text-sm font-medium text-foreground transition-colors duration-300 hover:text-primary"
               >
                 View experience
                 <ArrowRight className="h-4 w-4" />

@@ -6,22 +6,25 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const outDir = join(__dirname, "../public/images/projects");
 mkdirSync(outDir, { recursive: true });
 
+const PRIMARY = "#1a6b63";
+const SECONDARY = "#c45c2a";
+
 const projects = [
-  { file: "job-portal.svg", title: "Job Portal", accent: "#64748b" },
-  { file: "restaurant.svg", title: "Restaurant OS", accent: "#78716c" },
-  { file: "crm.svg", title: "CRM Desktop", accent: "#6366f1" },
-  { file: "typolens.svg", title: "TypoLens", accent: "#0ea5e9" },
-  { file: "aws-events.svg", title: "AWS Events", accent: "#f59e0b" },
-  { file: "cashflow.svg", title: "Cashflow", accent: "#10b981" },
-  { file: "plantark.svg", title: "PlantArk", accent: "#22c55e" },
-  { file: "100x-bot.svg", title: "100x Bot", accent: "#8b5cf6" },
-  { file: "oasis-notes.svg", title: "Oasis Notes", accent: "#94a3b8" },
+  { file: "job-portal.svg", title: "Job Portal", accent: PRIMARY },
+  { file: "restaurant.svg", title: "Restaurant OS", accent: SECONDARY },
+  { file: "crm.svg", title: "CRM Desktop", accent: PRIMARY },
+  { file: "typolens.svg", title: "TypoLens", accent: SECONDARY },
+  { file: "aws-events.svg", title: "AWS Events", accent: PRIMARY },
+  { file: "cashflow.svg", title: "Cashflow", accent: SECONDARY },
+  { file: "plantark.svg", title: "PlantArk", accent: PRIMARY },
+  { file: "100x-bot.svg", title: "100x Bot", accent: SECONDARY },
+  { file: "oasis-notes.svg", title: "Oasis Notes", accent: PRIMARY },
 ];
 
 for (const p of projects) {
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
-  <rect width="800" height="500" fill="#111113"/>
-  <rect x="40" y="40" width="720" height="420" rx="16" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+  <rect width="800" height="500" fill="#0d1210"/>
+  <rect x="40" y="40" width="720" height="420" rx="16" fill="#151c19" stroke="#2a3833" stroke-width="1"/>
   <rect x="72" y="72" width="200" height="12" rx="6" fill="${p.accent}" opacity="0.6"/>
   <rect x="72" y="100" width="320" height="8" rx="4" fill="#3f3f46"/>
   <rect x="72" y="120" width="280" height="8" rx="4" fill="#27272a"/>

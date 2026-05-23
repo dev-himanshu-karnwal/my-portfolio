@@ -2,28 +2,45 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "@/data/navigation";
 import { profile } from "@/data/profile";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { Button } from "@/components/ui/button";
+import { EASE_OUT } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 glass">
+    <header
+      className={cn(
+        "sticky top-0 z-50 border-b transition-[background,box-shadow,border-color] duration-500",
+        scrolled
+          ? "border-border/80 glass shadow-sm shadow-foreground/[0.03]"
+          : "border-border/40 bg-transparent"
+      )}
+    >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
         <Link
           href="/"
-          className="text-sm font-semibold tracking-tight text-foreground"
+          className="font-display text-lg font-medium tracking-tight text-foreground transition-opacity duration-300 hover:opacity-80"
           onClick={() => setOpen(false)}
         >
           {profile.name.split(" ")[0]}
-          <span className="text-muted-foreground">.</span>
+          <span className="text-secondary">.</span>
         </Link>
 
         <ul className="hidden items-center gap-1 md:flex">
@@ -33,17 +50,24 @@ export function Navbar() {
                 ? pathname === "/"
                 : pathname.startsWith(link.href);
             return (
-              <li key={link.href}>
+              <li key={link.href} className="relative">
                 <Link
                   href={link.href}
                   className={cn(
-                    "rounded-md px-3 py-2 text-sm transition-colors",
+                    "relative block rounded-md px-3 py-2 text-sm transition-colors duration-300",
                     isActive
                       ? "text-foreground"
                       : "text-muted-foreground hover:text-foreground"
                   )}
                 >
                   {link.label}
+                  {isActive && (
+                    <motion.span
+                      layoutId="nav-underline"
+                      className="absolute inset-x-2 -bottom-px h-px bg-primary"
+                      transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                    />
+                  )}
                 </Link>
               </li>
             );
@@ -64,34 +88,47 @@ export function Navbar() {
         </div>
       </nav>
 
-      {open && (
-        <div className="border-t border-border bg-background md:hidden">
-          <ul className="flex flex-col gap-1 p-4">
-            {navLinks.map((link) => {
-              const isActive =
-                link.href === "/"
-                  ? pathname === "/"
-                  : pathname.startsWith(link.href);
-              return (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    onClick={() => setOpen(false)}
-                    className={cn(
-                      "block rounded-lg px-4 py-3 text-sm",
-                      isActive
-                        ? "bg-muted text-foreground"
-                        : "text-muted-foreground"
-                    )}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.35, ease: EASE_OUT }}
+            className="overflow-hidden border-t border-border bg-background/95 backdrop-blur-md md:hidden"
+          >
+            <ul className="flex flex-col gap-1 p-4">
+              {navLinks.map((link, i) => {
+                const isActive =
+                  link.href === "/"
+                    ? pathname === "/"
+                    : pathname.startsWith(link.href);
+                return (
+                  <motion.li
+                    key={link.href}
+                    initial={{ opacity: 0, x: -8 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.05, duration: 0.35, ease: EASE_OUT }}
                   >
-                    {link.label}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      )}
+                    <Link
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      className={cn(
+                        "block rounded-lg px-4 py-3 text-sm transition-colors duration-300",
+                        isActive
+                          ? "bg-muted text-foreground"
+                          : "text-muted-foreground hover:bg-muted/60 hover:text-foreground"
+                      )}
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.li>
+                );
+              })}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

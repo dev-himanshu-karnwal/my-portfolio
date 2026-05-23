@@ -17,8 +17,8 @@ export function Metrics() {
         <StaggerContainer className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {metrics.map((metric) => (
             <StaggerItem key={metric.label}>
-              <div className="rounded-xl border border-border bg-card p-6 text-center">
-                <p className="text-3xl font-semibold tracking-tight text-foreground">
+              <div className="surface-interactive rounded-xl border border-border bg-card p-6 text-center">
+                <p className="text-3xl font-semibold tracking-tight text-primary">
                   {metric.value}
                 </p>
                 <p className="mt-2 text-sm font-medium text-foreground">{metric.label}</p>

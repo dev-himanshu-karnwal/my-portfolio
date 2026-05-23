@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Cormorant_Garamond, Inter, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -15,6 +15,13 @@ const inter = Inter({
 const jetbrains = JetBrains_Mono({
   variable: "--font-jetbrains",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
@@ -61,7 +68,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="dark">
       <body
-        className={`${inter.variable} ${jetbrains.variable} min-h-screen bg-background font-sans text-foreground antialiased`}
+        className={`${inter.variable} ${jetbrains.variable} ${cormorant.variable} min-h-screen bg-background font-sans text-foreground antialiased`}
       >
         <ThemeProvider>
           <div className="relative flex min-h-screen flex-col">
