@@ -27,7 +27,7 @@ export function Navbar() {
       className={cn(
         "sticky top-0 z-50 border-b transition-[background,box-shadow,border-color] duration-500",
         scrolled
-          ? "border-border/80 glass shadow-sm shadow-foreground/[0.03]"
+          ? "border-border/80 glass shadow-sm shadow-foreground/3"
           : "border-border/40 bg-transparent"
       )}
     >
