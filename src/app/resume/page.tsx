@@ -9,22 +9,24 @@ import { experiences } from "@/data/experience";
 import { skillCategories } from "@/data/skills";
 import { projects } from "@/data/projects";
 import { profile } from "@/data/profile";
+import { education } from "@/data/education";
+import { highlights } from "@/data/highlights";
 
 export const metadata: Metadata = {
   title: "Resume",
-  description: `Resume of ${profile.name} — Freelance Software Engineer and Full Stack Developer.`,
+  description: `Resume of ${profile.name} — ${profile.title}.`,
 };
 
 export default function ResumePage() {
-  const topSkills = skillCategories.flatMap((c) => c.skills).slice(0, 16);
-  const topProjects = projects.filter((p) => p.featured).slice(0, 5);
+  const topSkills = skillCategories.flatMap((c) => c.skills).slice(0, 24);
+  const topProjects = projects.filter((p) => p.featured);
 
   return (
     <>
       <PageHeader
         label="Resume"
         title={profile.name}
-        description={`${profile.title} · Full Stack · Product-focused execution`}
+        description={`${profile.roles.join(" · ")}`}
       />
       <section className="py-12 sm:py-16">
         <Container className="max-w-3xl">
@@ -49,11 +51,15 @@ export default function ResumePage() {
                 {profile.title} · {profile.location}
               </p>
               <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-                {profile.positioning}
+                {profile.summary}
               </p>
               <p className="mt-4 text-sm">
                 <a href={`mailto:${profile.email}`} className="text-foreground hover:underline">
                   {profile.email}
+                </a>
+                {" · "}
+                <a href={`tel:${profile.phone.replace(/\s/g, "")}`} className="text-foreground hover:underline">
+                  {profile.phone}
                 </a>
                 {" · "}
                 <a href={profile.links.linkedin} className="text-foreground hover:underline">
@@ -93,7 +99,7 @@ export default function ResumePage() {
 
             <section>
               <h2 className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-                Selected projects
+                Key projects
               </h2>
               <ul className="mt-6 space-y-4">
                 {topProjects.map((p) => (
@@ -112,19 +118,40 @@ export default function ResumePage() {
               <h2 className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
                 Skills
               </h2>
-              <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-                {topSkills.join(" · ")}
-              </p>
+              <div className="mt-6 space-y-4">
+                {skillCategories.map((cat) => (
+                  <div key={cat.title}>
+                    <p className="text-xs font-medium text-foreground">{cat.title}</p>
+                    <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+                      {cat.skills.join(" · ")}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </section>
 
             <section>
               <h2 className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-                Achievements
+                Education
+              </h2>
+              <ul className="mt-4 space-y-3">
+                {education.map((item) => (
+                  <li key={item.degree}>
+                    <p className="text-sm font-medium text-foreground">{item.degree}</p>
+                    <p className="text-sm text-muted-foreground">{item.institution}</p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                Additional
               </h2>
               <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-muted-foreground">
-                <li>250+ HackerRank problems solved with 5-star badges</li>
-                <li>Production systems across web, desktop, and cloud</li>
-                <li>Full-stack execution with product ownership mindset</li>
+                {highlights.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
               </ul>
             </section>
           </article>

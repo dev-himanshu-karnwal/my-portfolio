@@ -8,17 +8,30 @@ import "lenis/dist/lenis.css";
 
 const LENIS_OPTIONS = {
   autoRaf: true,
-  lerp: 0.08,
+  lerp: 0.12,
   smoothWheel: true,
   anchors: true,
 } as const;
 
 const SNAP_OPTIONS = {
   type: "proximity" as const,
-  duration: 1.1,
-  distanceThreshold: "40%" as const,
-  debounce: 120,
+  duration: 0.85,
+  distanceThreshold: "22%" as const,
+  debounce: 250,
 };
+
+/** Pause section snap when the footer is on screen so Lenis does not pull back to the last section. */
+function shouldPauseSectionSnap(isPaused: boolean) {
+  const footer = document.querySelector("footer");
+  if (!footer) return false;
+
+  const { top } = footer.getBoundingClientRect();
+  const viewport = window.innerHeight;
+  const pauseLine = viewport * 0.9;
+  const resumeLine = viewport * 1.05;
+
+  return isPaused ? top < resumeLine : top < pauseLine;
+}
 
 function prefersReducedMotion() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -79,8 +92,28 @@ function SectionSnap() {
 
     const frame = requestAnimationFrame(registerSections);
 
+    let snapActive = true;
+    let snapPaused = false;
+    const syncSnapPause = () => {
+      snapPaused = shouldPauseSectionSnap(snapPaused);
+
+      if (snapPaused && snapActive) {
+        snap.stop();
+        snapActive = false;
+      } else if (!snapPaused && !snapActive) {
+        snap.start();
+        snapActive = true;
+      }
+    };
+
+    lenis.on("scroll", syncSnapPause);
+    window.addEventListener("resize", syncSnapPause);
+    syncSnapPause();
+
     return () => {
       cancelAnimationFrame(frame);
+      lenis.off("scroll", syncSnapPause);
+      window.removeEventListener("resize", syncSnapPause);
       snap.destroy();
       snapRef.current = null;
     };

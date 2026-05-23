@@ -52,17 +52,6 @@ export function Hero() {
             </motion.p>
 
             <div className="mt-4">
-              <motion.p
-                className="font-display text-2xl font-medium tracking-tight text-muted-foreground sm:text-3xl"
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ ...transition.base, delay: 0.2 }}
-              >
-                Hi, I&apos;m{" "}
-                <span className="text-foreground">{firstName}</span>
-                <span className="text-secondary">.</span>
-              </motion.p>
-
               <TextReveal
                 as="h1"
                 text={profile.headline}
@@ -191,7 +180,7 @@ export function Hero() {
               >
                 <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] border border-border bg-muted shadow-[0_32px_64px_-24px] shadow-foreground/10 ring-1 ring-foreground/[0.04]">
                   <Image
-                    src="/images/profile.svg"
+                    src="/images/profile.jpeg"
                     alt={profile.name}
                     fill
                     className="object-cover object-top scale-[1.02]"

@@ -6,20 +6,67 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const outDir = join(__dirname, "../public/images/projects");
 mkdirSync(outDir, { recursive: true });
 
-const PRIMARY = "#3d3a36";
-const SECONDARY = "#6b8f71";
-
+// Synced with src/data/projects.ts
 const projects = [
-  { file: "job-portal.svg", title: "Job Portal", accent: PRIMARY },
-  { file: "restaurant.svg", title: "Restaurant OS", accent: SECONDARY },
-  { file: "crm.svg", title: "CRM Desktop", accent: PRIMARY },
-  { file: "typolens.svg", title: "TypoLens", accent: SECONDARY },
-  { file: "aws-events.svg", title: "AWS Events", accent: PRIMARY },
-  { file: "cashflow.svg", title: "Cashflow", accent: SECONDARY },
-  { file: "plantark.svg", title: "PlantArk", accent: PRIMARY },
-  { file: "100x-bot.svg", title: "100x Bot", accent: SECONDARY },
-  { file: "oasis-notes.svg", title: "Oasis Notes", accent: PRIMARY },
+  { file: "plantark.svg", title: "PlantArk", accent: "#3d3a36" },
+  { file: "100x-bot.svg", title: "100x.bot", accent: "#6b8f71" },
+  { file: "oasis-notes.svg", title: "Oasis Notes", accent: "#3d3a36" },
+  {
+    file: "blue-collar-platform.svg",
+    title: "Blue-Collar Workforce Platform",
+    accent: "#3d3a36",
+  },
+  { file: "restaurant.svg", title: "RapidDine", accent: "#6b8f71" },
+  { file: "kameti-ledger.svg", title: "Kameti Ledger", accent: "#3f4a5a" },
+  { file: "typolens.svg", title: "TypoLens", accent: "#6b8f71" },
+  {
+    file: "aws-event.svg",
+    title: "Event-Driven Notification & Analytics Platform",
+    accent: "#3d3a36",
+  },
+  { file: "kharchabook.svg", title: "KharchaBook", accent: "#4f7c82" },
 ];
+
+function escapeXml(text) {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
+function wrapTitle(title, maxLen = 36) {
+  if (title.length <= maxLen) return [title];
+
+  const lines = [];
+  let current = "";
+
+  for (const word of title.split(" ")) {
+    const next = current ? `${current} ${word}` : word;
+    if (next.length > maxLen && current) {
+      lines.push(current);
+      current = word;
+    } else {
+      current = next;
+    }
+  }
+
+  if (current) lines.push(current);
+  return lines;
+}
+
+function titleMarkup(title) {
+  const lines = wrapTitle(title);
+  const startY = lines.length > 1 ? 396 : 420;
+
+  return lines
+    .map(
+      (line, index) =>
+        `<text x="72" y="${startY + index * 28}" fill="#fafafa" font-family="system-ui,sans-serif" font-size="22" font-weight="600">${escapeXml(line)}</text>`,
+    )
+    .join("\n  ");
+}
 
 for (const p of projects) {
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
@@ -32,7 +79,7 @@ for (const p of projects) {
   <rect x="96" y="184" width="120" height="80" rx="8" fill="${p.accent}" opacity="0.15"/>
   <rect x="232" y="184" width="120" height="80" rx="8" fill="${p.accent}" opacity="0.25"/>
   <rect x="368" y="184" width="120" height="80" rx="8" fill="${p.accent}" opacity="0.15"/>
-  <text x="72" y="420" fill="#fafafa" font-family="system-ui,sans-serif" font-size="22" font-weight="600">${p.title}</text>
+  ${titleMarkup(p.title)}
   <text x="72" y="448" fill="#71717a" font-family="system-ui,sans-serif" font-size="14">Case study mockup</text>
 </svg>`;
   writeFileSync(join(outDir, p.file), svg);

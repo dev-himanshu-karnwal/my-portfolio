@@ -8,6 +8,6 @@
   <rect x="96" y="184" width="120" height="80" rx="8" fill="#3d3a36" opacity="0.15"/>
   <rect x="232" y="184" width="120" height="80" rx="8" fill="#3d3a36" opacity="0.25"/>
   <rect x="368" y="184" width="120" height="80" rx="8" fill="#3d3a36" opacity="0.15"/>
-  <text x="72" y="420" fill="#fafafa" font-family="system-ui,sans-serif" font-size="22" font-weight="600">AWS Events</text>
+  <text x="72" y="420" fill="#fafafa" font-family="system-ui,sans-serif" font-size="22" font-weight="600">Blue-Collar Workforce Platform</text>
   <text x="72" y="448" fill="#71717a" font-family="system-ui,sans-serif" font-size="14">Case study mockup</text>
 </svg>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Mail, FileText, Briefcase } from "lucide-react";
+import { Mail, Phone, FileText, Briefcase } from "lucide-react";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons/social";
 import { PageHeader } from "@/components/shared/page-header";
 import { Container } from "@/components/shared/container";
@@ -15,10 +15,15 @@ export const metadata: Metadata = {
 
 const links = [
   { href: `mailto:${profile.email}`, label: profile.email, icon: Mail },
+  {
+    href: `tel:${profile.phone.replace(/\s/g, "")}`,
+    label: profile.phone,
+    icon: Phone,
+  },
   { href: profile.links.github, label: "GitHub", icon: GitHubIcon, external: true },
   { href: profile.links.linkedin, label: "LinkedIn", icon: LinkedInIcon, external: true },
   { href: profile.links.upwork, label: "Upwork", icon: Briefcase, external: true },
-  { href: profile.links.resume, label: "Resume PDF", icon: FileText },
+  { href: profile.links.resume, label: "Resume PDF", icon: FileText, external: true },
 ];
 
 export default function ContactPage() {

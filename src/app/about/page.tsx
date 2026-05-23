@@ -26,7 +26,7 @@ export default function AboutPage() {
             <FadeIn>
               <div className="relative mx-auto aspect-square max-w-[280px] overflow-hidden rounded-2xl border border-border bg-muted">
                 <Image
-                  src="/images/profile.svg"
+                  src="/images/profile.jpeg"
                   alt={profile.name}
                   fill
                   className="object-cover"
@@ -36,10 +36,7 @@ export default function AboutPage() {
             </FadeIn>
             <FadeIn delay={0.1}>
               <div className="prose-section space-y-6">
-                <p>
-                  I&apos;m {profile.name}, a software engineer with 5+ years of experience focused on products that
-                  work in production—not just in demos.
-                </p>
+                <p>{profile.summary}</p>
                 <p>
                   Most of my career has been independent work: job portals, restaurant systems,
                   desktop CRMs, cloud pipelines, extensions, and personal tools for clients and teams.

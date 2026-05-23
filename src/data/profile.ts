@@ -1,13 +1,19 @@
 export const profile = {
   name: "Himanshu Karnwal",
-  title: "Freelance Software Engineer",
-  roles: ["Software Engineer", "Full Stack Engineer", "Product-focused"],
-  tagline: "Freelance engineer building scalable digital products—with ownership from scope to production.",
-  headline: "Freelance engineer who ships real systems—from client requirements to production.",
+  title: "Freelance Full-Stack Developer",
+  roles: ["Full-Stack Developer", "Software Engineer"],
+  tagline:
+    "5+ years building scalable web, mobile, and browser-based products for clients worldwide.",
+  headline:
+    "Full-stack engineer who owns the lifecycle—from architecture and APIs to production.",
+  summary:
+    "Senior full-stack developer with 5+ years of freelance experience designing and delivering scalable web, mobile, and browser-based applications. Proficient in React, Next.js, Node.js, NestJS, and cloud deployments. Strong command of system design, real-time architectures, RBAC, multi-tenant SaaS platforms, and CI/CD pipelines. Comfortable owning the entire product lifecycle—from architecture and API design to production deployment—across diverse client engagements.",
   positioning:
-    "I take on freelance and contract work end to end: clear architecture, thoughtful UI, reliable backends, and deployments that hold up for real clients and users.",
-  email: "himanshu.karnwal@example.com",
+    "I design and deliver scalable web, mobile, and browser-based applications end to end—system design, real-time architectures, RBAC, multi-tenant SaaS, and CI/CD included.",
+  email: "himanshukar1810@gmail.com",
+  phone: "+91 82228 69464",
   location: "India",
+  availability: "Open to remote and international freelance engagements.",
   links: {
     github: "https://github.com/dev-himanshu-karnwal/",
     linkedin: "https://www.linkedin.com/in/himanshukarnwal/",

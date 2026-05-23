@@ -9,24 +9,24 @@ export const metrics: Metric[] = [
     value: "5+",
     label: "Years Building Products",
     description:
-      "Working across frontend, backend, cloud infrastructure, and product execution",
+      "Freelance delivery across web, mobile, browser extensions, and cloud systems",
   },
   {
     value: "20+",
     label: "Products & Systems Built",
     description:
-      "Experience across SaaS platforms, desktop apps, browser extensions, and cloud systems",
+      "SaaS platforms, mobile apps, Chrome extensions, and production cloud deployments",
   },
   {
-    value: "500+",
-    label: "Coding Challenges Solved",
+    value: "250+",
+    label: "HackerRank Problems Solved",
     description:
-      "Consistent hands-on practice in algorithms and problem-solving",
+      "Algorithmic and data structure practice with 6 certificates earned",
   },
   {
     value: "End-to-End",
     label: "Engineering Ownership",
     description:
-      "From planning and architecture to deployment and iteration",
+      "From architecture and API design through CI/CD and production deployment",
   },
 ];

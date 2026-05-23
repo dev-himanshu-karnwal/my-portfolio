@@ -1,17 +1,9 @@
-export type ProjectCategory =
-  | "Web Application"
-  | "Desktop"
-  | "Extension"
-  | "Cloud"
-  | "Mobile"
-  | "Automation";
-
 export type Project = {
   slug: string;
   title: string;
   shortDescription: string;
   description: string;
-  category: ProjectCategory;
+  category: string;
   role: string;
   stack: string[];
   featured: boolean;
@@ -29,475 +21,804 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "blue-collar-job-portal",
-    title: "Blue-collar Job Portal",
+    slug: "plantark",
+    title: "PlantArk",
     shortDescription:
-      "Job discovery and application platform for skilled trade workers and employers.",
+      "Multi-vendor e-commerce marketplace for buying and selling plants, seeds, and gardening products in Australia.",
+
     description:
-      "A full-stack portal connecting blue-collar workers with verified employers, with structured job listings, applications, and admin oversight.",
-    category: "Web Application",
-    role: "Full Stack Engineer",
-    stack: ["Next.js", "Node.js", "PostgreSQL", "Tailwind CSS"],
-    featured: true,
-    image: "/images/projects/job-portal.svg",
-    accent: "#3d3a36",
-    overview:
-      "Built a production-ready job portal focused on clarity for workers and efficiency for employers. The platform supports job posting, search, applications, and role-based dashboards.",
-    problem:
-      "Traditional job boards are not optimized for skilled trade hiring—poor mobile experience, unclear requirements, and high friction for applicants without formal resumes.",
-    solution:
-      "Designed a streamlined flow with skill-based profiles, location-aware search, and employer tools to manage listings and applicant pipelines in one place.",
-    features: [
-      "Role-based dashboards for workers and employers",
-      "Job search with filters for trade, location, and pay range",
-      "Application tracking and status updates",
-      "Admin moderation for listings and users",
-      "Responsive UI optimized for mobile-first usage",
+      "Built and scaled the frontend experience for an Australian plant marketplace platform featuring product discovery, vendor listings, responsive shopping flows, and API-driven commerce architecture.",
+    category: "SaaS Platform",
+
+    role: "Frontend Engineer • Web Designer",
+
+    stack: [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "REST APIs",
+      "Tailwind CSS",
+      "Responsive UI",
     ],
+
+    featured: true,
+
+    image: "/images/projects/plantark.svg",
+
+    accent: "#3d3a36",
+
+    overview:
+      "Developed the customer-facing frontend for PlantArk, an Australian online marketplace focused on plants, seeds, and gardening products. Worked on scalable UI architecture, category navigation, product discovery flows, responsive layouts, and API-driven commerce experiences optimized for conversion and usability.",
+
+    problem:
+      "The platform required a modern and scalable marketplace frontend capable of handling large product catalogs, category-heavy navigation, responsive shopping experiences, and seamless integration with backend commerce APIs while maintaining strong usability across devices.",
+
+    solution:
+      "Built a modular React.js frontend architecture integrated with backend APIs for products, categories, carts, and order workflows. Focused heavily on responsive UX, optimized rendering, clean browsing flows, and scalable component systems suitable for a growing marketplace platform.",
+
+    features: [
+      "Marketplace-style product browsing experience",
+      "Advanced category-based navigation flows",
+      "Responsive shopping experience across devices",
+      "API-driven product listings and inventory states",
+      "Cart and checkout integration",
+      "Product detail pages optimized for conversions",
+      "Reusable frontend component architecture",
+      "Mobile-first responsive layouts",
+    ],
+
     architecture: [
       {
-        label: "Client",
-        description: "Next.js App Router with server components for SEO and fast initial loads.",
+        label: "Frontend Architecture",
+        description:
+          "Built using React.js with modular and reusable component-based architecture for scalable marketplace development.",
       },
       {
-        label: "API",
-        description: "RESTful Node.js services with validation and auth middleware.",
+        label: "API Integration",
+        description:
+          "Integrated REST APIs for products, categories, cart management, inventory handling, and order workflows.",
       },
       {
-        label: "Data",
-        description: "PostgreSQL with normalized schemas for jobs, users, and applications.",
+        label: "Responsive Experience",
+        description:
+          "Implemented responsive layouts and optimized UI behavior for desktop, tablet, and mobile shopping experiences.",
       },
     ],
+
     challenges: [
-      "Balancing simple UX for workers with rich data needs for employers",
-      "Designing scalable search without over-engineering on day one",
+      "Managing responsive marketplace layouts with large product catalogs",
+      "Handling asynchronous API-driven inventory and product states",
+      "Maintaining fast rendering performance across category-heavy pages",
+      "Designing scalable frontend structures for future marketplace growth",
     ],
+
     outcomes: [
-      "End-to-end hiring workflow from listing to application review",
-      "Maintainable codebase structured for future matching features",
+      "Delivered a production-ready marketplace frontend for an Australian client",
+      "Created scalable UI foundations for future feature expansion",
+      "Improved product discovery and browsing experience",
+      "Built clean separation between frontend presentation and backend commerce systems",
     ],
+
     learnings: [
-      "Domain-specific UX matters more than feature count in vertical products",
-      "Early schema design for applications saved refactoring later",
+      "Marketplace UX depends heavily on navigation clarity and product discovery speed",
+      "Scalable frontend architecture becomes critical as catalogs and workflows grow",
+      "Responsive commerce experiences require performance-focused rendering strategies",
+      "API-first e-commerce systems demand robust loading, caching, and state handling",
     ],
   },
   {
-    slug: "restaurant-ordering-system",
-    title: "Restaurant Ordering & Management",
+    slug: "100x-bot",
+
+    title: "100x.bot",
+
     shortDescription:
-      "Ordering, kitchen workflow, and management system for restaurant operations.",
+      "AI-powered browser automation platform with Chrome extension workflows, page augmentation, smart tables, and multi-agent browser actions.",
+
     description:
-      "Integrated system for customer ordering, kitchen queue management, and back-office reporting.",
-    category: "Web Application",
-    role: "Full Stack Engineer",
-    stack: ["React", "Node.js", "MongoDB", "Socket.io"],
+      "Worked on the frontend platform and Chrome extension for 100x.bot — an AI browser automation system enabling workflow recording, page-level automation, smart data operations, and browser-based AI agents.",
+
+    category: "AI Automation Platform",
+
+    role: "Frontend Engineer • Chrome Extension Developer",
+
+    stack: [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "Chrome Extension APIs",
+      "Browser Automation",
+      "Tailwind CSS",
+      "AI Integration",
+    ],
+
     featured: true,
+
+    image: "/images/projects/100x-bot.svg",
+
+    accent: "#6b8f71",
+
+    overview:
+      "Contributed to the frontend platform and Chrome extension architecture for 100x.bot — an AI-powered browser automation platform designed for workflow recording, smart browser actions, page augmentation, and multi-step automation across websites. Worked on scalable frontend systems, extension interfaces, browser interaction layers, and responsive product experiences.",
+
+    problem:
+      "Traditional browser workflows are repetitive, fragmented, and difficult to automate without complex tooling. The platform required a browser-native automation system capable of interacting deeply with websites, workflows, tabs, and page content while remaining scalable and user-friendly.",
+
+    solution:
+      "Developed frontend systems and browser extension interfaces enabling workflow automation, page-level actions, AI-assisted interactions, and browser augmentation features. Built reusable UI systems and extension interaction layers designed for scalable automation workflows and responsive user experiences.",
+
+    features: [
+      "Chrome extension-based browser automation",
+      "Workflow recording and browser interaction systems",
+      "Page-level automation and augmentation features",
+      "Responsive SaaS frontend platform",
+      "AI-assisted workflow interactions",
+      "Dynamic dashboard and data-driven interfaces",
+      "Cross-page browser workflow support",
+      "Reusable component-based frontend architecture",
+    ],
+
+    architecture: [
+      {
+        label: "Frontend Platform",
+        description:
+          "Built scalable React.js and Next.js frontend systems powering the AI automation platform and workflow interfaces.",
+      },
+      {
+        label: "Browser Extension",
+        description:
+          "Worked with Chrome Extension APIs, content scripts, and browser interaction layers to support workflow automation and page augmentation.",
+      },
+      {
+        label: "Automation Layer",
+        description:
+          "Implemented frontend interaction systems supporting browser workflows, automation actions, and AI-assisted operations across websites.",
+      },
+    ],
+
+    challenges: [
+      "Handling reliable browser interactions across different website structures",
+      "Building scalable extension UI systems for automation-heavy workflows",
+      "Maintaining responsive performance inside browser-based environments",
+      "Designing frontend systems flexible enough for rapidly evolving AI product features",
+    ],
+
+    outcomes: [
+      "Contributed to a production-grade AI browser automation platform",
+      "Delivered scalable frontend and extension systems for workflow automation",
+      "Improved browser interaction usability and responsive UX",
+      "Built reusable foundations supporting future automation features and workflows",
+    ],
+
+    learnings: [
+      "Browser automation products require careful balance between flexibility, reliability, and usability",
+      "Chrome extension architecture becomes significantly more complex at production scale",
+      "AI workflow systems evolve rapidly, making modular frontend architecture critical",
+      "Responsive UX matters even more in productivity and automation-focused applications",
+    ],
+  },
+  {
+    slug: "oasis-notes",
+
+    title: "Oasis Notes",
+
+    shortDescription:
+      "Multi-tenant SaaS productivity platform with tenant isolation, RBAC, dashboards, and scalable workspace architecture.",
+
+    description:
+      "Built and scaled a multi-tenant SaaS platform focused on workspace productivity, tenant-aware workflows, secure authentication, dashboard systems, and modular backend architecture for organization-level operations.",
+
+    category: "SaaS Multi-tenant",
+
+    role: "Full Stack Engineer",
+
+    stack: [
+      "React.js",
+      "Next.js",
+      "NestJS",
+      "PostgreSQL",
+      "TypeScript",
+      "Multi-tenant Architecture",
+      "RBAC",
+    ],
+
+    featured: true,
+
+    image: "/images/projects/oasis-notes.svg",
+
+    accent: "#3d3a36",
+
+    overview:
+      "Worked on a production-grade multi-tenant SaaS application designed for organizational productivity and collaboration workflows. Contributed to frontend dashboards, tenant-aware application flows, authentication systems, RBAC implementation, and scalable backend architecture supporting secure workspace isolation.",
+
+    problem:
+      "The platform required a scalable SaaS architecture capable of securely handling multiple organizations within a shared infrastructure while maintaining strict tenant isolation, permission management, and scalable productivity workflows.",
+
+    solution:
+      "Developed modular frontend and backend systems using React.js, NestJS, and PostgreSQL with tenant-aware routing, role-based access control, authentication workflows, and scalable API structures optimized for long-term SaaS growth.",
+
+    features: [
+      "Multi-tenant SaaS architecture",
+      "Tenant-level data isolation",
+      "Role-based access control (RBAC)",
+      "Authentication and session management",
+      "Workspace and dashboard systems",
+      "Tenant-aware frontend routing",
+      "Scalable modular backend architecture",
+      "Responsive productivity-focused UI",
+    ],
+
+    architecture: [
+      {
+        label: "Frontend Platform",
+        description:
+          "Built React.js frontend systems with tenant-aware routing, dashboard workflows, and responsive workspace experiences.",
+      },
+      {
+        label: "Backend Architecture",
+        description:
+          "Implemented modular NestJS backend structures for authentication, RBAC, tenant management, and scalable business workflows.",
+      },
+      {
+        label: "Data Layer",
+        description:
+          "Used PostgreSQL with tenant isolation strategies and scalable relational data modeling for SaaS workloads.",
+      },
+    ],
+
+    challenges: [
+      "Maintaining strict tenant isolation across APIs and application workflows",
+      "Designing scalable RBAC systems for organization-level permissions",
+      "Building reusable SaaS architecture without tightly coupling tenant logic",
+      "Managing complex dashboard and workspace states efficiently",
+    ],
+
+    outcomes: [
+      "Delivered a scalable multi-tenant SaaS platform foundation",
+      "Implemented secure organization-level isolation and permission systems",
+      "Built maintainable frontend and backend architecture for long-term scalability",
+      "Improved workspace usability and dashboard responsiveness",
+    ],
+
+    learnings: [
+      "Multi-tenant SaaS complexity grows rapidly without strict architectural boundaries",
+      "RBAC design impacts nearly every layer of a production SaaS system",
+      "Modular NestJS architecture becomes critical as SaaS platforms scale",
+      "Tenant-aware frontend routing and state management require disciplined system design",
+    ],
+  },
+  {
+    slug: "rapiddine",
+    title: "RapidDine",
+    shortDescription:
+      "Cloud-driven restaurant ordering, real-time kitchen queue, and operational analytics for front-of-house, kitchen, and management teams.",
+    description:
+      "Comprehensive restaurant management system designed to streamline ordering workflows, unify kitchen operations, and provide actionable reporting. The solution delivers a seamless digital experience for both staff and management, reducing operational friction during peak hours and minimizing order errors via synchronized, real-time updates.",
+    category: "Restaurant Management System",
+    role: "Full Stack Engineer • Devops Engineer",
+    stack: [
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "Socket.io",
+      "Tailwind CSS",
+      "REST APIs",
+    ],
+    featured: false,
     image: "/images/projects/restaurant.svg",
     accent: "#6b8f71",
     overview:
-      "A restaurant operations platform covering menu management, real-time order flow, and staff dashboards for kitchen and front-of-house teams.",
+      "Developed a robust operations platform for restaurants, combining a digital menu, order management, kitchen display systems, and staff accessibility tools. The system ensures real-time status visibility from order placement to service completion, empowering teams to deliver prompt, error-free service even under high demand.",
     problem:
-      "Fragmented tools for orders, kitchen display, and inventory create delays, order errors, and poor visibility during peak hours.",
+      "Restaurants relying on paper tickets and scattered digital tools struggle with miscommunication, order delays, and operational bottlenecks, particularly during busy shifts. Lack of real-time coordination causes kitchen confusion, lost orders, and inefficient reporting, impacting both service quality and business insights.",
     solution:
-      "Unified web application with real-time order updates, role-specific views, and centralized menu and status management.",
+      "Engineered a centralized web application that digitally manages menu offerings, routes live orders to appropriate kitchen stations using WebSockets, and maintains a synchronized view of active and historical orders for staff and managers. All roles—admin, kitchen, counter—operate from unified, role-specific dashboards tightly integrated with data persistence and analytics.",
     features: [
-      "Digital menu with categories and modifiers",
-      "Real-time order queue for kitchen staff",
-      "Order status tracking from placed to served",
-      "Basic sales and order history reporting",
-      "Multi-role access for admin, staff, and counter",
+      "Interactive digital menu with category, modifier, and availability controls",
+      "Instant order placement and live kitchen order queue with preparation timers",
+      "Role-based dashboards for counter, kitchen, and admin functions",
+      "Comprehensive order status management (placed → in progress → served)",
+      "Sales, performance, and inventory analytics reporting",
+      "Centralized menu management and dynamic pricing",
+      "Real-time kitchen and counter synchronization using Socket.io",
+      "Mobile-optimized interface for staff across devices",
     ],
     architecture: [
       {
-        label: "Frontend",
-        description: "React SPA with optimistic UI for order placement.",
+        label: "Frontend Experience",
+        description:
+          "React.js SPA architected with modular UI components, stateful order flows, and mobile-first design for staff accessibility.",
       },
       {
-        label: "Realtime",
-        description: "WebSocket layer for kitchen and counter synchronization.",
+        label: "Realtime Order Flow",
+        description:
+          "Socket.io-powered bidirectional communication syncing order and status events between counter and multiple kitchen stations.",
       },
       {
-        label: "Backend",
-        description: "Node.js services with MongoDB for flexible menu documents.",
+        label: "Backend & Persistence",
+        description:
+          "Node.js REST API services with MongoDB for flexible menu document structures, order/event logs, and analytics aggregation.",
+      },
+      {
+        label: "Access Control",
+        description:
+          "Role-based authentication with granular permissions for admin, kitchen, and front-of-house users.",
       },
     ],
     challenges: [
-      "Keeping order state consistent under concurrent updates",
-      "Designing kitchen UI for speed in high-noise environments",
+      "Ensuring atomicity and real-time consistency of order state across concurrent kitchen and counter interactions",
+      "Designing kitchen and counter UIs for ultra-fast, glanceable operation in noisy, high-traffic environments",
+      "Building robust role separation and audit trails to track order assignment, progression, and modifications",
+      "Handling dynamic menu changes and out-of-stock events during service without disrupting active orders",
+      "Optimizing event-driven WebSocket workflow to minimize latency and support multiple simultaneous connections",
     ],
     outcomes: [
-      "Reduced manual coordination between counter and kitchen",
-      "Single source of truth for active orders during service",
+      "Eliminated manual miscommunication between service and kitchen teams, reducing order delays and preparation errors",
+      "Enabled instant, transparent tracking of all orders through preparation and service lifecycles",
+      "Provided actionable analytics and order history for management, supporting business planning and performance optimization",
+      "Created an extensible platform architecture ready for integration with POS, payment, and inventory systems",
+      "Drove measurable improvements in staff coordination and customer turnaround time during high-traffic periods",
     ],
     learnings: [
-      "Realtime features need clear state machines, not ad-hoc events",
-      "Staff-facing UI should prioritize legibility over visual flair",
+      "Effective real-time systems in hospitality require explicit, well-typed state machines rather than loose event triggers",
+      "Glanceable, low-distraction UX for staff dramatically improves speed and accuracy in high-pressure environments",
+      "Operational resilience depends on robust order recovery, persistent audit logs, and granular permissions control",
+      "Coordinating across multiple user types (admin, staff, kitchen) demands clear, role-specific workflow isolation",
     ],
   },
   {
-    slug: "crm-desktop-app",
-    title: "CRM Desktop App",
+    slug: "blue-collar-workforce-platform",
+    title: "Blue-Collar Workforce Platform",
     shortDescription:
-      "Desktop CRM for client tracking, pipelines, and follow-ups.",
+      "Scalable workforce hiring platform connecting skilled trade workers with verified employers through trust-first mobile workflows.",
+
     description:
-      "Cross-platform desktop application for managing leads, contacts, and sales activity offline-capable workflows.",
-    category: "Desktop",
-    role: "Full Stack Engineer",
-    stack: ["Electron", "React", "SQLite", "TypeScript"],
-    featured: true,
-    image: "/images/projects/crm.svg",
-    accent: "#3d3a36",
-    overview:
-      "Built a desktop-first CRM for teams that need reliable client data, pipeline visibility, and fast local performance without browser tab clutter.",
-    problem:
-      "Web-only CRMs can feel slow for daily power users, and teams needed offline access during client visits.",
-    solution:
-      "Electron-based desktop app with local SQLite storage, sync-ready architecture, and focused views for pipeline and follow-ups.",
-    features: [
-      "Contact and company management",
-      "Deal pipeline with stage tracking",
-      "Activity log and follow-up reminders",
-      "Local data persistence with export options",
-      "Keyboard-friendly navigation for power users",
+      "Built a production-oriented workforce marketplace focused on blue-collar hiring across industries such as construction, electrical, plumbing, mechanical, and labor services. The platform supports Admin, Employer, and Worker ecosystems with role-driven onboarding, business verification pipelines, location-aware job discovery, and lightweight hiring workflows optimized for mobile-first users without traditional resumes.",
+
+    category: "Mobile Application",
+
+    role: "Founding Full Stack Engineer • Devops Engineer",
+
+    stack: [
+      "React Native (Expo)",
+      "TypeScript",
+      "NestJS",
+      "MongoDB",
+      "JWT Authentication",
+      "REST APIs",
+      "Role-Based Access Control",
+      "Cloud Media Storage",
     ],
+
+    featured: true,
+
+    image: "/images/projects/blue-collar-platform.svg",
+
+    accent: "#3d3a36",
+
+    overview:
+      "Engineered a mobile-first hiring ecosystem designed specifically for India’s blue-collar workforce, enabling workers and employers to connect through simplified trust-based workflows instead of traditional resume-heavy recruitment systems.",
+
+    problem:
+      "Conventional job portals are heavily optimized for white-collar hiring and create unnecessary friction for blue-collar workers who often lack resumes, formal qualifications, or desktop access. Existing platforms also fail to establish trust between employers and workers during early-stage interactions.",
+
+    solution:
+      "Designed a trust-first onboarding model allowing users to browse jobs and worker listings before authentication, significantly reducing entry friction. Implemented a multi-role architecture with worker verification systems, employer business profiles, role-aware workflows, application tracking, and scalable backend modules optimized for future expansion.",
+
+    features: [
+      "Multi-role ecosystem with Admin, Employer, and Worker workflows",
+      "Trust-first onboarding with delayed authentication strategy",
+      "Location-aware job discovery and worker search experience",
+      "Employer business profile management with verification workflows",
+      "Worker identity verification using government-issued documents",
+      "Role-specific onboarding and profile management pipelines",
+      "Application lifecycle management: Applied, Shortlisted, Hired",
+      "Mobile-first UX optimized for low-friction blue-collar hiring",
+      "Admin moderation system for jobs, workers, and employer verification",
+      "Reporting and trust-safety workflows for suspicious listings",
+      "Review and rating system tied to completed hiring interactions",
+      "Scalable modular backend architecture using NestJS",
+    ],
+
     architecture: [
       {
-        label: "Shell",
-        description: "Electron main process handling window and local DB access.",
+        label: "Mobile Client",
+        description:
+          "React Native (Expo) application delivering lightweight and responsive workflows optimized for field workers and employers across low-end and mid-range mobile devices.",
       },
       {
-        label: "Renderer",
-        description: "React UI with shared state for pipeline and contacts.",
+        label: "Backend Services",
+        description:
+          "NestJS-based modular backend with role-aware APIs, JWT authentication, validation pipelines, onboarding orchestration, and verification management.",
       },
       {
-        label: "Storage",
-        description: "SQLite for structured CRM entities and query performance.",
+        label: "Data Layer",
+        description:
+          "MongoDB schema architecture designed for flexible user models, job listings, applications, verification states, and employer-business relationships.",
+      },
+      {
+        label: "Access Control",
+        description:
+          "Role-based access control system enforcing isolated workflows and permissions across Admin, Employer, and Worker ecosystems.",
       },
     ],
+
     challenges: [
-      "Managing Electron security boundaries between main and renderer",
-      "Designing migrations for local SQLite schema updates",
+      "Designing low-friction onboarding flows for non-technical users without compromising platform trust",
+      "Balancing guest browsing accessibility with authentication-gated actions",
+      "Structuring scalable role-based workflows while keeping the mobile UX simple",
+      "Handling verification and moderation pipelines for workers, businesses, and job listings",
+      "Designing hiring workflows without relying on resumes, messaging systems, or payment gateways",
+      "Optimizing data structures for location-aware discovery and multi-business employer relationships",
     ],
+
     outcomes: [
-      "Responsive desktop experience for daily sales workflows",
-      "Foundation for optional cloud sync in future iterations",
+      "Created an end-to-end workforce hiring ecosystem tailored for blue-collar recruitment",
+      "Reduced onboarding friction through delayed-authentication architecture",
+      "Established scalable foundations for future integrations such as multilingual support, chat, and payment systems",
+      "Designed modular backend services ready for production-scale iteration and feature expansion",
+      "Delivered a mobile-first UX aligned with real-world usage patterns of field workers and contractors",
     ],
+
     learnings: [
-      "Desktop apps reward disciplined data modeling from the start",
-      "Keep the renderer thin—business logic belongs in testable modules",
+      "Trust-building mechanisms are more critical than feature density in workforce marketplaces",
+      "Guest-mode browsing significantly improves first-time user engagement in high-friction domains",
+      "Mobile-first architecture is essential for blue-collar workforce products in emerging markets",
+      "Verification workflows directly impact platform credibility and hiring quality",
+      "Role separation and workflow isolation become increasingly important as marketplace complexity grows",
+    ],
+  },
+  {
+    slug: "kameti-ledger",
+    title: "Kameti Ledger",
+    shortDescription:
+      "Desktop-based financial ledger and chit fund management system with advanced payment tracking, auditability, and flexible installment handling.",
+
+    description:
+      "Enterprise-grade desktop financial management platform built for managing Kametis (Chit Funds) with complex real-world payment scenarios, audit trails, enrollments, withdrawals, and explainable financial calculations.",
+
+    category: "FinTech Desktop Application",
+
+    role: "Tech Lead • Full Stack Engineer",
+
+    stack: [
+      "Electron",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Node.js",
+      "TailwindCSS",
+      "TanStack Query",
+      "Zustand",
+      "Chart.js",
+    ],
+
+    featured: true,
+
+    image: "/images/projects/kameti-ledger.svg",
+
+    accent: "#3f4a5a",
+
+    overview:
+      "Architected and developed a desktop-first financial ledger platform for managing Kametis with advanced installment workflows, flexible payment adjustments, withdrawal management, and fully explainable financial calculations.",
+
+    problem:
+      "Traditional Kameti operations are often managed manually through notebooks, spreadsheets, and fragmented records, leading to calculation mistakes, missing payment history, poor visibility into dues, and zero auditability for financial decisions.",
+
+    solution:
+      "Designed a modular financial management system with event-driven payment tracking, multi-entry installment support, withdrawal workflows, calculation logs, and real-time reporting to handle complex real-world Kameti operations with transparency and reliability.",
+
+    features: [
+      "Multi-kameti financial management system",
+      "Advanced installment tracking with partial and extra payment handling",
+      "Flexible adjustment engine for future installment settlements",
+      "Monthly withdrawal workflows with custom month-wise payout rules",
+      "Joint enrollment and multi-user participation support",
+      "Financial audit logs with explainable calculation breakdowns",
+      "Interactive dashboards with payment and progress analytics",
+      "Document uploads for KYC and agreement management",
+      "Keyboard-optimized desktop workflows for rapid data entry",
+      "Cross-module reporting for users, enrollments, dues, and withdrawals",
+    ],
+
+    architecture: [
+      {
+        label: "Desktop Shell",
+        description:
+          "Electron-based desktop runtime with isolated IPC communication and secure native integrations.",
+      },
+      {
+        label: "Frontend Layer",
+        description:
+          "React + TypeScript application with modular feature architecture, centralized state management, and reusable UI systems.",
+      },
+      {
+        label: "Domain Engine",
+        description:
+          "Dedicated financial logic layer handling installments, dues, fines, extra adjustments, withdrawals, and audit calculations independently from UI.",
+      },
+      {
+        label: "Persistence Layer",
+        description:
+          "SQL-driven relational data architecture optimized for transactional consistency, financial traceability, and reporting performance.",
+      },
+    ],
+
+    challenges: [
+      "Designing a flexible installment engine capable of handling partial, skipped, extra, and late payments without corrupting financial state",
+      "Building explainable financial calculations with audit trails for every automated adjustment",
+      "Managing complex enrollment relationships including multiple enrollments and joint participation scenarios",
+      "Separating business logic from Electron and UI layers for future web/mobile scalability",
+      "Designing high-speed UX workflows for operators handling large daily financial entries",
+    ],
+
+    outcomes: [
+      "Replaced fragmented manual bookkeeping workflows with centralized digital financial tracking",
+      "Improved visibility into user dues, payments, and withdrawal activity across multiple Kametis",
+      "Created scalable architecture capable of expanding into web and mobile platforms",
+      "Established reusable financial domain modules for future fintech-oriented applications",
+    ],
+
+    learnings: [
+      "Financial systems should be modeled around immutable events and auditability rather than mutable balances",
+      "Desktop applications handling operational workflows require extremely optimized navigation and low-friction data entry",
+      "Complex payment systems become maintainable only when domain logic is isolated from UI and storage layers",
+      "Explainability of calculations is as important as the calculations themselves in financial products",
     ],
   },
   {
     slug: "typolens-chrome-extension",
     title: "TypoLens",
     shortDescription:
-      "Chrome extension for spelling and grammar checks across the web.",
+      "Chrome extension for seamless, context-aware spelling and grammar enhancements throughout your browsing experience.",
     description:
-      "Browser extension that surfaces writing issues inline with minimal disruption to the user's flow.",
-    category: "Extension",
-    role: "Frontend Engineer",
+      "A browser extension that brings real-time, inline writing assistance to any text field, offering discreet error detection and correction suggestions without disrupting your workflow.",
+    category: "Browser Extension",
+    role: "Software Engineer",
     stack: ["TypeScript", "Chrome APIs", "React"],
     featured: false,
     image: "/images/projects/typolens.svg",
     accent: "#6b8f71",
     overview:
-      "TypoLens brings lightweight proofreading to any text field on the web through a Chrome extension with a clean overlay UI.",
+      "TypoLens is a user-friendly writing improvement tool for Chrome, providing instant spelling and grammar feedback directly within web forms, emails, and documents, all through a minimal and intuitive overlay interface.",
     problem:
-      "Context switching to external grammar tools breaks focus when writing emails, forms, or long-form content in the browser.",
+      "Writers often get interrupted when switching between tools to check their spelling and grammar, leading to lost focus and productivity during online writing tasks.",
     solution:
-      "Content-script based detection with an unobtrusive highlight layer and actionable suggestions on demand.",
+      "Built an unobtrusive browser extension using content scripts that automatically detects and highlights language errors in real time, letting users see and address issues on the spot with streamlined suggestions.",
     features: [
-      "Inline highlighting of spelling and grammar issues",
-      "One-click suggestions and replacements",
-      "Configurable rules and ignored domains",
-      "Lightweight popup for settings and stats",
+      "Instant, inline identification of spelling and grammar issues in any web text field",
+      "Quick-fix suggestions and single-click corrections",
+      "Customizable checking rules and support for excluded domains",
+      "Lightweight, intuitive popup for configuration and usage statistics",
     ],
     architecture: [
       {
         label: "Background",
-        description: "Service worker coordinating settings and API calls.",
+        description:
+          "Service worker manages extension state and API interactions.",
       },
       {
         label: "Content",
-        description: "DOM-aware scripts for text extraction and overlay rendering.",
+        description:
+          "DOM-scanning scripts identify text, inject highlights, and surface correction tools directly within the browser environment.",
       },
       {
         label: "UI",
-        description: "Extension popup built with React for settings management.",
+        description:
+          "React-powered popup interface for managing extension settings and presenting usage insights.",
       },
     ],
     challenges: [
-      "Handling diverse page DOM structures without breaking layouts",
-      "Performance on content-heavy pages",
+      "Ensuring compatibility across varied and dynamic website structures without interfering with user content",
+      "Maintaining performance and responsiveness when processing large or complex web pages",
     ],
     outcomes: [
-      "Usable proofreading flow without leaving the current tab",
-      "Extension packaged for Chrome Web Store distribution readiness",
+      "Provided a non-intrusive, always-available writing assistant for web users",
+      "Successfully distributed the extension with robust packaging and easy browser installation",
     ],
     learnings: [
-      "Extension development requires defensive DOM handling",
-      "User trust depends on minimal permissions and clear behavior",
+      "Reliable writing assistance requires careful DOM handling and a focus on user privacy",
+      "Users expect seamless integration and minimal disruption when using writing tools in their browsers",
     ],
   },
   {
     slug: "aws-event-notification-system",
-    title: "AWS Event-driven Notifications",
+    title: "Event-Driven Notification & Analytics Platform",
     shortDescription:
-      "Serverless notification pipeline triggered by application events.",
+      "Distributed serverless event processing platform with fan-out notifications and analytics pipelines.",
+
     description:
-      "Event-driven architecture on AWS for reliable, scalable notification delivery across channels.",
-    category: "Cloud",
-    role: "Backend Engineer",
-    stack: ["AWS Lambda", "SQS", "SNS", "Node.js", "DynamoDB"],
+      "Architected a scalable event-driven backend on AWS to process application events asynchronously using EventBridge-based routing, decoupled Lambda consumers, and resilient messaging patterns for notification delivery, analytics ingestion, and audit logging.",
+
+    category: "Cloud Architecture",
+
+    role: "Backend Engineer • Cloud Engineer",
+
+    stack: [
+      "AWS Lambda",
+      "Amazon EventBridge",
+      "Amazon SQS",
+      "Amazon DynamoDB",
+      "Node.js",
+      "Serverless Framework",
+      "CloudWatch",
+      "GitHub Actions",
+    ],
+
     featured: true,
-    image: "/images/projects/aws-events.svg",
+
+    image: "/images/projects/aws-event.svg",
+
     accent: "#3d3a36",
+
     overview:
-      "Designed a serverless notification system that decouples producers from delivery, with retries, dead-letter handling, and channel routing.",
+      "Designed a serverless event-driven platform capable of processing and routing application events to multiple independent consumers with retry handling, dead-letter queues, structured logging, and asynchronous fan-out architecture.",
+
     problem:
-      "Monolithic notification logic created bottlenecks, failed deliveries under load, and tight coupling to core application services.",
+      "Core application services were tightly coupled with notification and analytics workflows, creating reliability bottlenecks, blocking synchronous operations, and increasing operational complexity as event volume scaled.",
+
     solution:
-      "Event bus pattern with SQS queues, Lambda processors, and SNS for fan-out to email, SMS, and in-app channels.",
+      "Implemented an event-driven architecture using Amazon EventBridge as the central event bus, Lambda-based consumers for isolated processing, and SQS-backed retry mechanisms with DLQ support to ensure fault-tolerant and scalable event handling.",
+
     features: [
-      "Async event ingestion from application services",
-      "Per-channel delivery workers with retry policies",
-      "Dead-letter queues for failed message inspection",
-      "Template-based notification payloads",
-      "CloudWatch metrics for throughput and errors",
+      "Centralized event bus for decoupled inter-service communication",
+      "Multi-consumer fan-out architecture for notifications, analytics, and audit logging",
+      "Idempotent event processing to prevent duplicate execution during retries",
+      "Dead-letter queue strategy for failed event isolation and replay",
+      "Structured logging and monitoring with CloudWatch",
+      "Serverless CI/CD pipeline using GitHub Actions and AWS IAM OIDC authentication",
+      "Asynchronous event processing with automatic scaling under load",
+      "Environment-aware infrastructure deployment using Serverless Framework",
     ],
+
     architecture: [
       {
-        label: "Ingress",
-        description: "API Gateway / direct publish to SQS from app services.",
+        label: "Event Ingestion",
+        description:
+          "REST APIs publish domain events to Amazon EventBridge through Lambda-based publisher services.",
       },
       {
-        label: "Processing",
-        description: "Lambda consumers normalizing events and routing by type.",
+        label: "Event Routing",
+        description:
+          "EventBridge rules route events dynamically to independent Lambda consumers based on event type and source patterns.",
       },
       {
-        label: "Delivery",
-        description: "SNS topics fanning out to email, SMS, and webhook handlers.",
+        label: "Asynchronous Processing",
+        description:
+          "Dedicated Lambda consumers process notifications, analytics persistence, and audit logging workflows independently.",
+      },
+      {
+        label: "Failure Handling",
+        description:
+          "SQS dead-letter queues capture repeatedly failed events for inspection, replay, and operational recovery.",
       },
     ],
+
     challenges: [
-      "Idempotency for duplicate events",
-      "Cost control for high-volume notification types",
+      "Designing idempotent consumers to safely handle duplicate event deliveries",
+      "Managing retry behavior and visibility timeouts in asynchronous workflows",
+      "Preventing tight coupling between event producers and downstream consumers",
+      "Handling Lambda cold starts and execution timeout alignment",
+      "Ensuring fault isolation without impacting unrelated consumers",
     ],
+
     outcomes: [
-      "Decoupled core app from notification delivery concerns",
-      "Improved reliability with observable failure paths",
+      "Established a loosely coupled event-driven architecture improving scalability and maintainability",
+      "Reduced dependency between core business workflows and notification infrastructure",
+      "Enabled independent scaling and deployment of downstream processing services",
+      "Improved operational resilience through DLQ-based failure recovery mechanisms",
+      "Created reusable serverless infrastructure patterns for future distributed systems",
     ],
+
     learnings: [
-      "Serverless shines for spiky, async workloads with clear boundaries",
-      "Invest in DLQs and alarms before scaling traffic",
+      "Event-driven systems require strong idempotency and retry-awareness by design",
+      "Serverless architectures are highly effective for bursty asynchronous workloads",
+      "Distributed systems demand explicit failure handling and observability strategies",
+      "EventBridge simplifies scalable fan-out architectures compared to tightly coupled service integrations",
+      "Infrastructure-as-Code and CI/CD are critical for repeatable cloud deployments",
     ],
   },
   {
-    slug: "personal-cashflow-app",
-    title: "Personal Cashflow App",
+    slug: "kharchabook",
+    title: "KharchaBook",
     shortDescription:
-      "Personal finance tracker for income, expenses, and monthly cashflow.",
+      "Cashflow and financial operations platform for tracking income, expenses, recurring liabilities, and multi-account financial activity.",
+
     description:
-      "Focused app for tracking transactions, categories, and monthly financial snapshots.",
-    category: "Web Application",
+      "Production-grade finance management platform engineered to handle transaction tracking, recurring obligations, account-level cashflow visibility, and financial analytics with accounting-safe data architecture and scalable relational modeling.",
+
+    category: "FinTech Platform",
+
     role: "Full Stack Engineer",
-    stack: ["Next.js", "PostgreSQL", "Prisma", "Tailwind CSS"],
-    featured: false,
-    image: "/images/projects/cashflow.svg",
-    accent: "#6b8f71",
-    overview:
-      "A personal finance tool built for clarity—quick entry, category insights, and month-over-month cashflow without bloated feature sets.",
-    problem:
-      "Spreadsheets work but are tedious for daily logging; many finance apps are overloaded with features irrelevant to personal tracking.",
-    solution:
-      "Minimal transaction ledger with dashboards for spending patterns and monthly net cashflow.",
-    features: [
-      "Income and expense entry with categories",
-      "Monthly summary and trend views",
-      "Recurring transaction support",
-      "Export for backup and analysis",
+
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "React Hook Form",
+      "Zod",
+      "Supabase Auth",
+      "SQL Migrations",
     ],
+
+    featured: true,
+
+    image: "/images/projects/kharchabook.svg",
+
+    accent: "#4f7c82",
+
+    overview:
+      "KharchaBook is a financial operations and cashflow tracking platform designed to manage real-world personal finance workflows including multi-account expense tracking, recurring liabilities, SIPs, EMIs, family transfers, and monthly cashflow visibility. The system focuses on operational financial clarity rather than bloated fintech-style features.",
+
+    problem:
+      "Traditional expense trackers and spreadsheet-based systems become unreliable as financial activity grows across multiple accounts, recurring obligations, cash transactions, and monthly liabilities. Most existing tools prioritize visual dashboards over accurate financial operations and low-friction transaction management.",
+
+    solution:
+      "Built a structured financial ledger platform with normalized accounting-safe architecture, recurring transaction workflows, category analytics, account-level visibility, and scalable transaction aggregation. The system was engineered for long-term maintainability, financial consistency, and rapid daily transaction logging.",
+
+    features: [
+      "Multi-account financial tracking across bank accounts and cash wallets",
+      "Income, expense, and transfer transaction management",
+      "Recurring liability engine for SIPs, EMIs, subscriptions, and bills",
+      "Monthly cashflow summaries and spending analytics",
+      "Category-level financial insights and trend analysis",
+      "Protected financial data using Supabase authentication and RLS",
+      "Migration-driven PostgreSQL schema management",
+      "Responsive dashboard optimized for rapid transaction entry",
+      "Transaction filtering, grouping, and searchable ledger views",
+      "Financially consistent transfer workflows between accounts",
+    ],
+
     architecture: [
       {
-        label: "App",
-        description: "Next.js with authenticated routes and server actions.",
+        label: "Frontend Architecture",
+        description:
+          "Built using Next.js App Router with modular feature-driven architecture, server components, authenticated route protection, and reusable UI systems using shadcn/ui.",
       },
       {
-        label: "ORM",
-        description: "Prisma over PostgreSQL for typed data access.",
+        label: "Database & Financial Modeling",
+        description:
+          "PostgreSQL schema designed with normalized financial entities, relational consistency, indexed transaction flows, UUID-based entities, and migration-driven database management.",
       },
       {
-        label: "Analytics",
-        description: "Aggregated queries for monthly rollups and charts.",
+        label: "Authentication & Security",
+        description:
+          "Supabase Auth integrated with row-level security policies to isolate financial data securely at the user level.",
+      },
+      {
+        label: "Recurring Transaction Engine",
+        description:
+          "Designed recurring financial workflows capable of handling monthly liabilities, future due tracking, and scheduled transaction generation architecture.",
+      },
+      {
+        label: "Analytics Layer",
+        description:
+          "Aggregation-driven analytics system for category breakdowns, monthly trends, spending analysis, and operational cashflow visibility.",
       },
     ],
+
     challenges: [
-      "Accurate month boundaries for recurring items",
-      "Keeping the UI fast with growing transaction history",
+      "Maintaining accounting consistency while supporting account-to-account transfers",
+      "Designing recurring transaction systems without creating duplicate financial records",
+      "Structuring scalable financial schemas while keeping transaction queries performant",
+      "Balancing fast transaction entry UX with strict financial validation rules",
+      "Implementing secure row-level financial isolation using Supabase RLS policies",
     ],
+
     outcomes: [
-      "Reliable personal ledger with actionable monthly views",
-      "Clean schema extensible for budgets and goals",
+      "Built a scalable finance operations platform with production-ready relational architecture",
+      "Reduced friction for daily financial tracking through optimized transaction workflows",
+      "Enabled operational visibility into recurring liabilities and monthly spending behavior",
+      "Established a migration-first backend workflow for long-term maintainability",
     ],
+
     learnings: [
-      "Personal tools succeed when logging takes seconds, not minutes",
-      "Aggregate tables help once transaction volume grows",
-    ],
-  },
-  {
-    slug: "plantark",
-    title: "PlantArk",
-    shortDescription:
-      "Plant care companion for tracking watering, light, and growth notes.",
-    description:
-      "Mobile-friendly web app helping users manage houseplant care schedules and health notes.",
-    category: "Mobile",
-    role: "Full Stack Engineer",
-    stack: ["React", "Firebase", "Tailwind CSS"],
-    featured: false,
-    image: "/images/projects/plantark.svg",
-    accent: "#3d3a36",
-    overview:
-      "PlantArk helps plant owners maintain consistent care routines with reminders, plant profiles, and simple health logging.",
-    problem:
-      "Inconsistent watering and forgotten care tasks lead to preventable plant health issues.",
-    solution:
-      "Per-plant profiles with care schedules, reminders, and a lightweight journal for observations.",
-    features: [
-      "Plant library with species and location tags",
-      "Watering and fertilizing reminders",
-      "Care history timeline",
-      "Photo notes for growth tracking",
-    ],
-    architecture: [
-      {
-        label: "Client",
-        description: "React PWA with offline-friendly caching for core views.",
-      },
-      {
-        label: "Backend",
-        description: "Firebase Auth and Firestore for user-scoped plant data.",
-      },
-      {
-        label: "Notifications",
-        description: "Scheduled reminders via Firebase Cloud Messaging.",
-      },
-    ],
-    challenges: [
-      "Timezone-safe reminder scheduling",
-      "Balancing free-tier Firebase limits with growth",
-    ],
-    outcomes: [
-      "Repeatable care habits through low-friction logging",
-      "Scalable data model for additional plant metadata",
-    ],
-    learnings: [
-      "Habit apps need defaults—smart presets beat empty forms",
-      "Reminders must be trustworthy or users abandon the product",
-    ],
-  },
-  {
-    slug: "100x-bot",
-    title: "100x Bot",
-    shortDescription:
-      "Telegram bot for automated workflows and community interactions.",
-    description:
-      "Telegram bot handling commands, notifications, and integrations for community operations.",
-    category: "Automation",
-    role: "Backend Engineer",
-    stack: ["Node.js", "Telegram Bot API", "MongoDB", "Redis"],
-    featured: false,
-    image: "/images/projects/100x-bot.svg",
-    accent: "#6b8f71",
-    overview:
-      "100x Bot automates repetitive community and ops tasks in Telegram—command handlers, scheduled messages, and lightweight integrations.",
-    problem:
-      "Manual moderation and repetitive announcements do not scale as community size grows.",
-    solution:
-      "Modular bot architecture with command plugins, rate limiting, and admin controls.",
-    features: [
-      "Custom slash commands and admin tools",
-      "Scheduled broadcasts to groups",
-      "User activity logging for moderation",
-      "Webhook-based deployment for reliability",
-    ],
-    architecture: [
-      {
-        label: "Bot runtime",
-        description: "Node.js service using Telegram Bot API with webhook mode.",
-      },
-      {
-        label: "Cache",
-        description: "Redis for session state and rate limit counters.",
-      },
-      {
-        label: "Persistence",
-        description: "MongoDB for user prefs and audit logs.",
-      },
-    ],
-    challenges: [
-      "Handling Telegram API rate limits gracefully",
-      "Secure admin command authorization",
-    ],
-    outcomes: [
-      "Reduced manual overhead for community managers",
-      "Extensible plugin structure for new commands",
-    ],
-    learnings: [
-      "Bots need explicit permission models from day one",
-      "Webhook deployments beat long polling for production stability",
-    ],
-  },
-  {
-    slug: "oasis-notes",
-    title: "Oasis Notes",
-    shortDescription:
-      "Structured note-taking app with folders, search, and markdown support.",
-    description:
-      "Clean notes application for capturing ideas, technical notes, and project documentation.",
-    category: "Web Application",
-    role: "Full Stack Engineer",
-    stack: ["Next.js", "Supabase", "TypeScript", "Tailwind CSS"],
-    featured: false,
-    image: "/images/projects/oasis-notes.svg",
-    accent: "#3d3a36",
-    overview:
-      "Oasis Notes is a focused writing environment—folders, full-text search, and markdown editing without the weight of enterprise knowledge bases.",
-    problem:
-      "Heavy note tools slow down quick capture; plain text lacks structure and findability over time.",
-    solution:
-      "Fast editor with folder hierarchy, instant search, and sync across devices via Supabase.",
-    features: [
-      "Markdown editor with live preview",
-      "Nested folders and tags",
-      "Full-text search across notes",
-      "Autosave and revision-friendly UX",
-    ],
-    architecture: [
-      {
-        label: "Frontend",
-        description: "Next.js with client editor and optimistic saves.",
-      },
-      {
-        label: "Auth & DB",
-        description: "Supabase for auth, row-level security, and realtime sync.",
-      },
-      {
-        label: "Search",
-        description: "Postgres full-text search for note content.",
-      },
-    ],
-    challenges: [
-      "Conflict handling for concurrent edits",
-      "Editor performance on long documents",
-    ],
-    outcomes: [
-      "Low-latency writing experience with reliable sync",
-      "Secure multi-user data isolation via RLS policies",
-    ],
-    learnings: [
-      "Notes apps live or die on save reliability and search speed",
-      "Supabase RLS is worth designing upfront, not bolting on later",
+      "Financial systems fail quickly when accounting consistency is treated casually",
+      "Transaction speed and operational clarity matter more than feature-heavy dashboards",
+      "Recurring financial workflows introduce significant complexity in state management and aggregation logic",
+      "Well-designed relational schemas dramatically simplify analytics and reporting layers",
     ],
   },
 ];

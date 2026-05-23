@@ -1,12 +1,26 @@
 "use client";
 
 import Link from "next/link";
+import { Briefcase, FileText, Mail, MapPin, Phone } from "lucide-react";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons/social";
 import { Container } from "@/components/shared/container";
 import { FadeIn } from "@/components/motion/fade-in";
 import { StaggerContainer, StaggerItem } from "@/components/motion/stagger-container";
 import { navLinks } from "@/data/navigation";
 import { profile } from "@/data/profile";
+
+const contactLinks = [
+  { href: `mailto:${profile.email}`, label: profile.email, icon: Mail },
+  {
+    href: `tel:${profile.phone.replace(/\s/g, "")}`,
+    label: profile.phone,
+    icon: Phone,
+  },
+  { href: profile.links.github, label: "GitHub", icon: GitHubIcon, external: true },
+  { href: profile.links.linkedin, label: "LinkedIn", icon: LinkedInIcon, external: true },
+  { href: profile.links.upwork, label: "Upwork", icon: Briefcase, external: true },
+  { href: profile.links.resume, label: "Resume PDF", icon: FileText },
+] as const;
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -62,16 +76,27 @@ export function Footer() {
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
               Contact
             </p>
-            <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li>
-                <a
-                  href={`mailto:${profile.email}`}
-                  className="link-underline transition-colors duration-300 hover:text-primary"
-                >
-                  {profile.email}
-                </a>
+            <ul className="mt-4 space-y-2">
+              {contactLinks.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      target={"_blank"}
+                      rel={"noopener noreferrer"}
+                      className="link-underline flex items-center gap-2 text-sm text-muted-foreground transition-colors duration-300 hover:text-primary"
+                    >
+                      <Icon className="h-4 w-4 shrink-0" />
+                      {link.label}
+                    </a>
+                  </li>
+                );
+              })}
+              <li className="flex items-center gap-2 text-sm text-muted-foreground">
+                <MapPin className="h-4 w-4 shrink-0" />
+                {profile.location}
               </li>
-              <li>{profile.location}</li>
             </ul>
           </StaggerItem>
         </StaggerContainer>
