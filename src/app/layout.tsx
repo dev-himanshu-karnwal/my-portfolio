@@ -31,12 +31,12 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://himanshukarnwal.dev"
   ),
   title: {
-    default: `${profile.name} · Software Engineer`,
+    default: `${profile.name} · ${profile.title}`,
     template: `%s · ${profile.name}`,
   },
   description: profile.positioning,
   keywords: [
-    "Software Engineer",
+    "Freelance Software Engineer",
     "Full Stack Engineer",
     "Next.js",
     "React",
@@ -47,13 +47,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: `${profile.name} · Software Engineer`,
+    title: `${profile.name} · ${profile.title}`,
     description: profile.positioning,
     siteName: profile.name,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${profile.name} · Software Engineer`,
+    title: `${profile.name} · ${profile.title}`,
     description: profile.positioning,
   },
   icons: {

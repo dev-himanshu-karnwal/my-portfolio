@@ -14,8 +14,8 @@ export function ExperienceSnapshot() {
       <Container>
         <SectionHeading
           label="Experience"
-          title="Current role"
-          description="Building production systems with ownership across the stack."
+          title="Current focus"
+          description="Freelance full-stack work—scope, build, and ship for clients and teams."
         />
         <FadeIn className="mt-10">
           <Card className="surface-interactive border-l-[3px] border-l-primary">

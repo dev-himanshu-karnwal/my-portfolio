@@ -42,25 +42,6 @@ export function Hero() {
         <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-10 xl:gap-14">
           {/* Copy */}
           <div className="order-2 lg:order-1 lg:col-span-7 xl:col-span-7">
-            <motion.div
-              className="flex flex-wrap items-center gap-3"
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ ...transition.base, delay: 0.08 }}
-            >
-              <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-3.5 py-1.5 text-xs font-medium text-foreground backdrop-blur-sm">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-secondary opacity-60" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-secondary" />
-                </span>
-                Open to opportunities
-              </span>
-              <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
-                <MapPin className="h-3.5 w-3.5 text-secondary" aria-hidden />
-                {profile.location}
-              </span>
-            </motion.div>
-
             <motion.p
               className="mt-8 font-mono text-xs uppercase tracking-[0.22em] text-secondary"
               initial={{ opacity: 0, y: 12 }}
@@ -229,23 +210,6 @@ export function Hero() {
                   </div>
                 </div>
 
-                {/* Role card */}
-                <motion.div
-                  initial={{ opacity: 0, x: 16 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ ...transition.base, delay: 0.7 }}
-                  className={cn(
-                    "absolute -right-2 top-10 max-w-[200px] rounded-xl border border-border glass px-4 py-3.5 shadow-lg sm:-right-6 sm:max-w-none",
-                    "lg:-right-8"
-                  )}
-                >
-                  <p className="text-[10px] font-mono uppercase tracking-widest text-secondary">
-                    Currently
-                  </p>
-                  <p className="mt-1 text-sm font-medium leading-snug">{profile.companyRole}</p>
-                  <p className="text-xs text-muted-foreground">{profile.company}</p>
-                </motion.div>
-
                 {/* Projects chip */}
                 <motion.div
                   initial={{ opacity: 0, x: -16 }}
@@ -253,8 +217,8 @@ export function Hero() {
                   transition={{ ...transition.base, delay: 0.82 }}
                   className="absolute -left-2 bottom-24 rounded-xl border border-border bg-card/95 px-4 py-3 shadow-lg backdrop-blur-sm sm:-left-6"
                 >
-                  <p className="font-display text-3xl font-medium text-secondary">9+</p>
-                  <p className="text-xs text-muted-foreground">Production projects shipped</p>
+                  <p className="font-display text-3xl font-medium text-secondary">5+</p>
+                  <p className="text-xs text-muted-foreground">Years Building Products</p>
                 </motion.div>
               </motion.div>
             </div>

@@ -6,23 +6,27 @@ export type Metric = {
 
 export const metrics: Metric[] = [
   {
-    value: "250+",
-    label: "HackerRank problems",
-    description: "Consistent practice in algorithms and problem-solving",
+    value: "5+",
+    label: "Years Building Products",
+    description:
+      "Working across frontend, backend, cloud infrastructure, and product execution",
   },
   {
-    value: "5★",
-    label: "HackerRank badges",
-    description: "Strong fundamentals across core CS topics",
+    value: "20+",
+    label: "Products & Systems Built",
+    description:
+      "Experience across SaaS platforms, desktop apps, browser extensions, and cloud systems",
   },
   {
-    value: "9+",
-    label: "Production projects",
-    description: "Systems built across web, desktop, cloud, and extensions",
+    value: "500+",
+    label: "Coding Challenges Solved",
+    description:
+      "Consistent hands-on practice in algorithms and problem-solving",
   },
   {
-    value: "Full-stack",
-    label: "Execution scope",
-    description: "Frontend, backend, databases, and deployment ownership",
+    value: "End-to-End",
+    label: "Engineering Ownership",
+    description:
+      "From planning and architecture to deployment and iteration",
   },
 ];

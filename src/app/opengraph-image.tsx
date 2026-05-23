@@ -22,7 +22,7 @@ export default function OgImage() {
         }}
       >
         <p style={{ fontSize: 24, color: "#a1a1aa", marginBottom: 16 }}>
-          Software Engineer · Full Stack
+          {profile.title} · Full Stack
         </p>
         <h1 style={{ fontSize: 64, fontWeight: 600, letterSpacing: "-0.02em", margin: 0 }}>
           {profile.name}

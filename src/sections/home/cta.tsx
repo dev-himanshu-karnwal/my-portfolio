@@ -26,7 +26,7 @@ export function Cta() {
                 Ready to build something solid?
               </h2>
               <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
-                Open to full-time roles, contract work, and product-focused engineering collaborations.
+                Open to freelance engagements, contract work, and product-focused engineering collaborations.
               </p>
               <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
                 <Button asChild size="lg">

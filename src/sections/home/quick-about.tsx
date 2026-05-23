@@ -18,12 +18,14 @@ export function QuickAbout() {
           <FadeIn>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                As a {profile.companyRole} at {profile.company}, I work across the full stack:
-                structured frontends, dependable APIs, and deployments that teams can maintain.
+                As a freelance software engineer, I partner with clients and teams across the full
+                stack—structured frontends, dependable APIs, and deployments that hold up after
+                handoff.
               </p>
               <p>
-                My approach balances product thinking with technical depth. I care about what ships,
-                how it behaves for users, and whether the codebase stays understandable six months later.
+                My path blends years of independent client work with a year in-house at DCT
+                Technology. I balance product thinking with technical depth: what ships, how it
+                behaves for users, and whether the codebase stays understandable six months later.
               </p>
               <Link
                 href="/about"

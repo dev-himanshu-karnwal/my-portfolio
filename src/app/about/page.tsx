@@ -37,18 +37,20 @@ export default function AboutPage() {
             <FadeIn delay={0.1}>
               <div className="prose-section space-y-6">
                 <p>
-                  I&apos;m {profile.name}, a {profile.companyRole} at {profile.company} and a
-                  full-stack engineer focused on products that work in production—not just in demos.
+                  I&apos;m {profile.name}, a software engineer with 5+ years of experience focused on products that
+                  work in production—not just in demos.
                 </p>
                 <p>
-                  My path has been shaped by building: job portals, restaurant systems, desktop CRMs,
-                  cloud pipelines, extensions, and personal tools. Each project reinforced the same
-                  lesson—understand the user problem, design for maintainability, and own delivery end to end.
+                  Most of my career has been independent work: job portals, restaurant systems,
+                  desktop CRMs, cloud pipelines, extensions, and personal tools for clients and teams.
+                  I spent 2024–2025 as a Software Engineer at DCT Technology, then returned to
+                  freelance—each chapter reinforced the same lesson: understand the problem, design for
+                  maintainability, and own delivery end to end.
                 </p>
                 <p>
-                  I work comfortably across frontend, backend, databases, and deployment. I collaborate
-                  with PMs and stakeholders on scope and tradeoffs, and I prefer shipping iteratively
-                  over waiting for perfect plans.
+                  I work comfortably across frontend, backend, databases, and deployment. Whether
+                  freelancing or collaborating in-house, I align on scope and tradeoffs early and
+                  prefer shipping iteratively over waiting for perfect plans.
                 </p>
               </div>
             </FadeIn>

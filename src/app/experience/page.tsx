@@ -16,12 +16,12 @@ export default function ExperiencePage() {
       <PageHeader
         label="Experience"
         title="Professional experience"
-        description="Roles and responsibilities focused on delivery, ownership, and cross-functional collaboration."
+        description="Freelance client work and a year in-house at DCT—delivery, ownership, and cross-functional collaboration."
       />
       <section className="py-16 sm:py-24">
-        <Container className="max-w-3xl">
+        <Container className="max-w-3xl space-y-12">
           {experiences.map((exp) => (
-            <FadeIn key={exp.company}>
+            <FadeIn key={exp.id}>
               <article className="rounded-2xl border border-border bg-card p-8 sm:p-10">
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <h2 className="text-xl font-semibold">{exp.role}</h2>

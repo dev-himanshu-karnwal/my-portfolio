@@ -12,7 +12,7 @@ import { profile } from "@/data/profile";
 
 export const metadata: Metadata = {
   title: "Resume",
-  description: `Resume of ${profile.name} — Software Engineer and Full Stack Developer.`,
+  description: `Resume of ${profile.name} — Freelance Software Engineer and Full Stack Developer.`,
 };
 
 export default function ResumePage() {
@@ -71,7 +71,7 @@ export default function ResumePage() {
                 Experience
               </h2>
               {experiences.map((exp) => (
-                <div key={exp.company} className="mt-6">
+                <div key={exp.id} className="mt-6">
                   <div className="flex flex-wrap justify-between gap-2">
                     <h3 className="font-semibold">{exp.role}</h3>
                     <span className="text-sm text-muted-foreground">{exp.period}</span>
