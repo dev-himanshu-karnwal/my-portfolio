@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" fill="#18181b"/>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="400" y2="400">
+      <stop offset="0%" stop-color="#3f3f46"/>
+      <stop offset="100%" stop-color="#27272a"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#g)"/>
+  <circle cx="200" cy="160" r="72" fill="#52525b"/>
+  <ellipse cx="200" cy="340" rx="120" ry="90" fill="#52525b"/>
+  <text x="200" y="380" text-anchor="middle" fill="#a1a1aa" font-family="system-ui,sans-serif" font-size="14">Himanshu Karnwal</text>
+</svg>
