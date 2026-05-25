@@ -6,9 +6,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const outDir = join(__dirname, "../public/images/projects");
 mkdirSync(outDir, { recursive: true });
 
-// Synced with src/data/projects.ts
+// Generated placeholder SVGs. PlantArk uses an uploaded JPG.
 const projects = [
-  { file: "plantark.svg", title: "PlantArk", accent: "#3d3a36" },
   { file: "100x-bot.svg", title: "100x.bot", accent: "#6b8f71" },
   { file: "oasis-notes.svg", title: "Oasis Notes", accent: "#3d3a36" },
   {

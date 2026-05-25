@@ -43,7 +43,7 @@ export const projects: Project[] = [
 
     featured: true,
 
-    image: "/images/projects/plantark.svg",
+    image: "/images/projects/plantark.jpg",
 
     accent: "#3d3a36",
 
