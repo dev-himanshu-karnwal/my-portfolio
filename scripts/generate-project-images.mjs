@@ -6,25 +6,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const outDir = join(__dirname, "../public/images/projects");
 mkdirSync(outDir, { recursive: true });
 
-// Generated placeholder SVGs. PlantArk uses an uploaded JPG.
-const projects = [
-  { file: "100x-bot.svg", title: "100x.bot", accent: "#6b8f71" },
-  { file: "oasis-notes.svg", title: "Oasis Notes", accent: "#3d3a36" },
-  {
-    file: "blue-collar-platform.svg",
-    title: "Blue-Collar Workforce Platform",
-    accent: "#3d3a36",
-  },
-  { file: "rangersfx.svg", title: "Rangers FX", accent: "#D2EFEB" },
-  { file: "kameti-ledger.svg", title: "Kameti Ledger", accent: "#3f4a5a" },
-  { file: "typolens.svg", title: "TypoLens", accent: "#6b8f71" },
-  {
-    file: "aws-event.svg",
-    title: "Event-Driven Notification & Analytics Platform",
-    accent: "#3d3a36",
-  },
-  { file: "kharchabook.svg", title: "KharchaBook", accent: "#4f7c82" },
-];
+// Generated placeholder SVGs. Projects with uploaded mockups use JPG assets.
+const projects = [];
 
 function escapeXml(text) {
   return text

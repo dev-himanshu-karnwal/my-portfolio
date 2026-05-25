@@ -133,7 +133,7 @@ export const projects: Project[] = [
 
     featured: true,
 
-    image: "/images/projects/100x-bot.svg",
+    image: "/images/projects/100x-bot.jpg",
 
     accent: "#6b8f71",
 
@@ -223,7 +223,7 @@ export const projects: Project[] = [
 
     featured: true,
 
-    image: "/images/projects/oasis-notes.svg",
+    image: "/images/projects/oasis-notes.jpg",
 
     accent: "#3d3a36",
 
@@ -288,7 +288,7 @@ export const projects: Project[] = [
   },
   {
     slug: "forex-network-platform",
-    title: "Forex Network Platform",
+    title: "Rangers FX",
     shortDescription:
       "Multi-role forex trading and referral platform with wallet management, commission workflows, and hierarchical partner systems.",
   
@@ -311,7 +311,7 @@ export const projects: Project[] = [
   
     featured: true,
   
-    image: "/images/projects/rangersfx.svg",
+    image: "/images/projects/rangersfx.jpg",
   
     accent: "#4f46e5",
   
@@ -406,7 +406,7 @@ export const projects: Project[] = [
 
     featured: true,
 
-    image: "/images/projects/blue-collar-platform.svg",
+    image: "/images/projects/blue-collar-platform.jpg",
 
     accent: "#3d3a36",
 
@@ -500,7 +500,7 @@ export const projects: Project[] = [
       "REST APIs",
     ],
     featured: false,
-    image: "/images/projects/restaurant.svg",
+    image: "/images/projects/rapiddine.jpg",
     accent: "#6b8f71",
     overview:
       "Developed a robust operations platform for restaurants, combining a digital menu, order management, kitchen display systems, and staff accessibility tools. The system ensures real-time status visibility from order placement to service completion, empowering teams to deliver prompt, error-free service even under high demand.",
@@ -588,7 +588,7 @@ export const projects: Project[] = [
 
     featured: true,
 
-    image: "/images/projects/kameti-ledger.svg",
+    image: "/images/projects/kameti-ledger.jpg",
 
     accent: "#3f4a5a",
 
@@ -687,7 +687,7 @@ export const projects: Project[] = [
 
     featured: true,
 
-    image: "/images/projects/aws-event.svg",
+    image: "/images/projects/aws-event.jpg",
 
     accent: "#3d3a36",
 
@@ -769,7 +769,7 @@ export const projects: Project[] = [
     role: "Software Engineer",
     stack: ["TypeScript", "Chrome APIs", "React"],
     featured: false,
-    image: "/images/projects/typolens.svg",
+    image: "/images/projects/typolens.jpg",
     accent: "#6b8f71",
     overview:
       "TypoLens is a user-friendly writing improvement tool for Chrome, providing instant spelling and grammar feedback directly within web forms, emails, and documents, all through a minimal and intuitive overlay interface.",
@@ -841,7 +841,7 @@ export const projects: Project[] = [
 
     featured: true,
 
-    image: "/images/projects/kharchabook.svg",
+    image: "/images/projects/kharchabook.jpg",
 
     accent: "#4f7c82",
 
